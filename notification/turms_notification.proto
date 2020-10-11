@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.dto.notification";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+import "model/signal/acknowledge.proto";
+import "model/signal/session.proto";
+
+import "request/turms_request.proto";
+
+import "model/common/int64_values.proto";
+import "model/common/int64_values_with_version.proto";
+import "model/group/group_invitations_with_version.proto";
+import "model/group/group_join_questions_answer_result.proto";
+import "model/group/group_join_questions_with_version.proto";
+import "model/group/group_join_requests_with_version.proto";
+import "model/group/group_members_with_version.proto";
+import "model/group/groups_with_version.proto";
+import "model/message/message_statuses.proto";
+import "model/message/messages.proto";
+import "model/message/messages_with_total_list.proto";
+import "model/user/user_friend_requests_with_version.proto";
+import "model/user/user_relationship_groups_with_version.proto";
+import "model/user/user_relationships_with_version.proto";
+import "model/user/user_session_ids.proto";
+import "model/user/users_infos_with_version.proto";
+import "model/user/users_online_statuses.proto";
+
+message TurmsNotification {
+    // Note: request_id is allowed to be duplicate because
+    // it is used for clients to identify the response of the same request id in a session
+    google.protobuf.Int64Value request_id = 1;
+    google.protobuf.Int32Value code = 2;
+    google.protobuf.StringValue reason = 3;
+    Data data = 4;
+    TurmsRequest relayed_request = 5;
+    // requester_id only exists when a requester triggers a notification to its recipients
+    // Note: Do not move requester_id to TurmsRequest because it needs to rebuild a whole TurmsNotification
+    // when recipients need the requester_id.
+    google.protobuf.Int64Value requester_id = 6;
+
+    message Data {
+        oneof kind {
+            Int64Values ids = 1;
+            Int64ValuesWithVersion ids_with_version = 2;
+            google.protobuf.StringValue url = 3;
+
+            Acknowledge acknowledge = 4;
+            Session session = 5;
+
+            Messages messages = 6;
+            MessageStatuses message_statuses = 7;
+            MessagesWithTotalList messages_with_total_list = 8;
+
+            UsersInfosWithVersion users_infos_with_version = 9;
+            UsersOnlineStatuses users_online_statuses = 10;
+            UserFriendRequestsWithVersion user_friend_requests_with_version = 11;
+            UserRelationshipGroupsWithVersion user_relationship_groups_with_version = 12;
+            UserRelationshipsWithVersion user_relationships_with_version = 13;
+            UserSessionIds user_session_ids = 14;
+
+            GroupInvitationsWithVersion group_invitations_with_version = 15;
+            GroupJoinQuestionsAnswerResult group_join_question_answer_result = 16;
+            GroupJoinRequestsWithVersion group_join_requests_with_version = 17;
+            GroupJoinQuestionsWithVersion group_join_questions_with_version = 18;
+            GroupMembersWithVersion group_members_with_version = 19;
+            GroupsWithVersion groups_with_version = 20;
+        }
+    }
+}

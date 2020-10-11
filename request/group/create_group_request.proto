@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.dto.request.group";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+message CreateGroupRequest {
+    string name = 1;
+    google.protobuf.StringValue intro = 2;
+    google.protobuf.StringValue announcement = 3;
+    google.protobuf.Int32Value minimum_score = 4;
+    google.protobuf.Int64Value group_type_id = 5;
+    google.protobuf.Int64Value mute_end_date = 6;
+}

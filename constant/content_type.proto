@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.constant";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+enum ContentType {
+    PROFILE = 0;
+    GROUP_PROFILE = 1;
+    ATTACHMENT = 2;
+//    STORAGE = 2;
+}

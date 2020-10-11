@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.dto.request.user";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "constant/user_status.proto";
+import "constant/device_type.proto";
+
+message UpdateUserOnlineStatusRequest {
+    UserStatus user_status = 1;
+    repeated DeviceType device_types = 2;
+}

@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.group";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+import "constant/group_member_role.proto";
+import "constant/user_status.proto";
+import "constant/device_type.proto";
+
+message GroupMember {
+    google.protobuf.Int64Value group_id = 1;
+    google.protobuf.Int64Value user_id = 2;
+    google.protobuf.StringValue name = 3;
+    GroupMemberRole role = 4;
+    google.protobuf.Int64Value join_date = 5;
+    google.protobuf.Int64Value mute_end_date = 6;
+
+    UserStatus user_status = 7;
+    repeated DeviceType using_device_types = 8;
+}

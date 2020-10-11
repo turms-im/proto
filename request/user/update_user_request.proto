@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.dto.request.user";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+import "constant/profile_access_strategy.proto";
+
+message UpdateUserRequest {
+    google.protobuf.StringValue password = 1;
+    google.protobuf.StringValue name = 2;
+    google.protobuf.StringValue intro = 3;
+    ProfileAccessStrategy profile_access_strategy = 4;
+}

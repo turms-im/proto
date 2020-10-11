@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.constant";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+enum MessageDeliveryStatus {
+    READY = 0;
+    SENDING = 1;
+    RECEIVED = 2;
+    RECALLING = 3;
+    RECALLED = 4;
+}

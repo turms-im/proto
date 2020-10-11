@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.constant";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+enum RequestStatus {
+    PENDING = 0;
+    ACCEPTED = 1;
+    ACCEPTED_WITHOUT_CONFIRM = 2;
+    DECLINED = 3;
+    IGNORED = 4;
+    EXPIRED = 5;
+    CANCELED = 6;
+}

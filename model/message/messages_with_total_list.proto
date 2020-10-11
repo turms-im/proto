@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.message";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "model/message/messages_with_total.proto";
+
+message MessagesWithTotalList {
+    repeated MessagesWithTotal messages_with_total_list = 1;
+}

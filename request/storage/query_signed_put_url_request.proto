@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.dto.request.storage";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+import "constant/content_type.proto";
+
+message QuerySignedPutUrlRequest {
+    ContentType content_type = 1;
+    google.protobuf.StringValue key_str = 2;
+    google.protobuf.Int64Value key_num = 3;
+    int64 content_length = 4;
+}

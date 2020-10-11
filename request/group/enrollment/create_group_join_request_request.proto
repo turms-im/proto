@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.dto.request.group.enrollment";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+message CreateGroupJoinRequestRequest {
+    int64 group_id = 1;
+    string content = 2;
+}

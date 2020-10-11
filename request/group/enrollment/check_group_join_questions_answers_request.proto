@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.dto.request.group.enrollment";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+message CheckGroupJoinQuestionsAnswersRequest {
+    map<int64, string> question_id_and_answer = 1;
+}

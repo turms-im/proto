@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.constant";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+enum UserStatus {
+    AVAILABLE = 0;
+    OFFLINE = 1;
+    INVISIBLE = 2;
+    BUSY = 3;
+    DO_NOT_DISTURB = 4;
+    AWAY = 5;
+    BE_RIGHT_BACK = 6;
+}

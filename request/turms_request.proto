@@ -1,0 +1,153 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.dto.request";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+import "request/signal/ack_request.proto";
+
+import "request/storage/delete_resource_request.proto";
+import "request/storage/query_signed_get_url_request.proto";
+import "request/storage/query_signed_put_url_request.proto";
+
+import "request/user/query_user_profile_request.proto";
+import "request/user/query_users_ids_nearby_request.proto";
+import "request/user/query_users_infos_nearby_request.proto";
+import "request/user/query_users_online_status_request.proto";
+import "request/user/update_user_location_request.proto";
+import "request/user/update_user_online_status_request.proto";
+import "request/user/update_user_request.proto";
+
+import "request/user/relationship/create_friend_request_request.proto";
+import "request/user/relationship/create_relationship_group_request.proto";
+import "request/user/relationship/create_relationship_request.proto";
+import "request/user/relationship/delete_relationship_group_request.proto";
+import "request/user/relationship/delete_relationship_request.proto";
+import "request/user/relationship/query_friend_requests_request.proto";
+import "request/user/relationship/query_related_users_ids_request.proto";
+import "request/user/relationship/query_relationship_groups_request.proto";
+import "request/user/relationship/query_relationships_request.proto";
+import "request/user/relationship/update_friend_request_request.proto";
+import "request/user/relationship/update_relationship_group_request.proto";
+import "request/user/relationship/update_relationship_request.proto";
+
+import "request/group/create_group_request.proto";
+import "request/group/delete_group_request.proto";
+import "request/group/query_group_request.proto";
+import "request/group/query_joined_groups_ids_request.proto";
+import "request/group/query_joined_groups_infos_request.proto";
+import "request/group/update_group_request.proto";
+
+import "request/group/blacklist/create_group_blacklisted_user_request.proto";
+import "request/group/blacklist/delete_group_blacklisted_user_request.proto";
+import "request/group/blacklist/query_group_blacklisted_users_ids_request.proto";
+import "request/group/blacklist/query_group_blacklisted_users_infos_request.proto";
+
+import "request/group/enrollment/check_group_join_questions_answers_request.proto";
+import "request/group/enrollment/create_group_invitation_request.proto";
+import "request/group/enrollment/create_group_join_request_request.proto";
+import "request/group/enrollment/create_group_join_question_request.proto";
+import "request/group/enrollment/delete_group_invitation_request.proto";
+import "request/group/enrollment/delete_group_join_request_request.proto";
+import "request/group/enrollment/delete_group_join_question_request.proto";
+import "request/group/enrollment/query_group_invitations_request.proto";
+import "request/group/enrollment/query_group_join_requests_request.proto";
+import "request/group/enrollment/query_group_join_questions_request.proto";
+import "request/group/enrollment/update_group_join_question_request.proto";
+
+import "request/group/member/create_group_member_request.proto";
+import "request/group/member/delete_group_member_request.proto";
+import "request/group/member/query_group_members_request.proto";
+import "request/group/member/update_group_member_request.proto";
+
+import "request/message/create_message_request.proto";
+import "request/message/query_message_statuses_request.proto";
+import "request/message/query_messages_request.proto";
+import "request/message/query_pending_messages_with_total_request.proto";
+import "request/message/update_message_request.proto";
+import "request/message/update_typing_status_request.proto";
+
+// Client -> Server -> Client
+message TurmsRequest {
+    // Note: request_id is allowed to be duplicate because
+    // it is used for clients to identify the response of the same request id in a session
+    google.protobuf.Int64Value request_id = 1;
+
+    oneof kind {
+        // Signal
+        AckRequest ack_request = 2;
+
+        // Storage
+        DeleteResourceRequest delete_resource_request = 3;
+        QuerySignedGetUrlRequest query_signed_get_url_request = 4;
+        QuerySignedPutUrlRequest query_signed_put_url_request = 5;
+
+        // Message
+        CreateMessageRequest create_message_request = 6;
+        QueryMessageStatusesRequest query_message_statuses_request = 7;
+        QueryMessagesRequest query_messages_request = 8;
+        QueryPendingMessagesWithTotalRequest query_pending_messages_with_total_request = 9;
+        UpdateMessageRequest update_message_request = 10;
+        UpdateTypingStatusRequest update_typing_status_request = 11;
+
+        // User
+        QueryUserProfileRequest query_user_profile_request = 100;
+        QueryUsersIdsNearbyRequest query_users_ids_nearby_request = 101;
+        QueryUsersInfosNearbyRequest query_users_infos_nearby_request = 102;
+        QueryUsersOnlineStatusRequest query_users_online_status_request = 103;
+        UpdateUserLocationRequest update_user_location_request = 104;
+        UpdateUserOnlineStatusRequest update_user_online_status_request = 105;
+        UpdateUserRequest update_user_request = 106;
+
+        // User Relationship
+        CreateFriendRequestRequest create_friend_request_request = 200;
+        CreateRelationshipGroupRequest create_relationship_group_request = 201;
+        CreateRelationshipRequest create_relationship_request = 202;
+        DeleteRelationshipGroupRequest delete_relationship_group_request = 203;
+        DeleteRelationshipRequest delete_relationship_request = 204;
+        QueryFriendRequestsRequest query_friend_requests_request = 205;
+        QueryRelatedUsersIdsRequest query_related_users_ids_request = 206;
+        QueryRelationshipGroupsRequest query_relationship_groups_request = 207;
+        QueryRelationshipsRequest query_relationships_request = 208;
+        UpdateFriendRequestRequest update_friend_request_request = 209;
+        UpdateRelationshipGroupRequest update_relationship_group_request = 210;
+        UpdateRelationshipRequest update_relationship_request = 211;
+
+        // Group
+        CreateGroupRequest create_group_request = 300;
+        DeleteGroupRequest delete_group_request = 301;
+        QueryGroupRequest query_group_request = 302;
+        QueryJoinedGroupsIdsRequest query_joined_groups_ids_request = 303;
+        QueryJoinedGroupsInfosRequest query_joined_groups_infos_request = 304;
+        UpdateGroupRequest update_group_request = 305;
+
+        // Group Blacklist
+        CreateGroupBlacklistedUserRequest create_group_blacklisted_user_request = 400;
+        DeleteGroupBlacklistedUserRequest delete_group_blacklisted_user_request = 401;
+        QueryGroupBlacklistedUsersIdsRequest query_group_blacklisted_users_ids_request = 402;
+        QueryGroupBlacklistedUsersInfosRequest query_group_blacklisted_users_infos_request = 403;
+
+        // Group Enrollment
+        CheckGroupJoinQuestionsAnswersRequest check_group_join_questions_answers_request = 500;
+        CreateGroupInvitationRequest create_group_invitation_request = 501;
+        CreateGroupJoinRequestRequest create_group_join_request_request = 502;
+        CreateGroupJoinQuestionRequest create_group_join_question_request = 503;
+        DeleteGroupInvitationRequest delete_group_invitation_request = 504;
+        DeleteGroupJoinRequestRequest delete_group_join_request_request = 505;
+        DeleteGroupJoinQuestionRequest delete_group_join_question_request = 506;
+        QueryGroupInvitationsRequest query_group_invitations_request = 507;
+        QueryGroupJoinRequestsRequest query_group_join_requests_request = 508;
+        QueryGroupJoinQuestionsRequest query_group_join_questions_request = 509;
+        UpdateGroupJoinQuestionRequest update_group_join_question_request = 510;
+
+        // Group Member
+        CreateGroupMemberRequest create_group_member_request = 600;
+        DeleteGroupMemberRequest delete_group_member_request = 601;
+        QueryGroupMembersRequest query_group_members_request = 602;
+        UpdateGroupMemberRequest update_group_member_request = 603;
+    }
+}

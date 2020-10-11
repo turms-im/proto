@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.dto.request.message";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+message QueryPendingMessagesWithTotalRequest {
+    google.protobuf.Int32Value size = 1;
+}

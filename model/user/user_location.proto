@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.user";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+message UserLocation {
+    float latitude = 1;
+    float longitude = 2;
+    google.protobuf.StringValue name = 3;
+    google.protobuf.StringValue address = 4;
+    google.protobuf.Int64Value timestamp = 5;
+}

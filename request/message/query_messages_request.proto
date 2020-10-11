@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.dto.request.message";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+import "constant/message_delivery_status.proto";
+
+message QueryMessagesRequest {
+    repeated int64 ids = 1;
+    google.protobuf.Int32Value size = 2;
+    google.protobuf.BoolValue are_group_messages = 3;
+    google.protobuf.BoolValue are_system_messages = 4;
+    google.protobuf.Int64Value from_id = 5;
+    google.protobuf.Int64Value delivery_date_after = 6;
+    google.protobuf.Int64Value delivery_date_before = 7;
+    MessageDeliveryStatus delivery_status = 8;
+}

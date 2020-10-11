@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.common";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+message Int64Values {
+    repeated int64 values = 1;
+}

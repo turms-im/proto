@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.user";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+message UserRelationship {
+    google.protobuf.Int64Value owner_id = 1;
+    google.protobuf.Int64Value related_user_id = 2;
+    google.protobuf.BoolValue is_blocked = 3;
+    google.protobuf.Int64Value group_index = 4;
+    google.protobuf.Int64Value establishment_date = 5;
+}

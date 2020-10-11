@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.user";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "model/user/user_status_detail.proto";
+
+message UsersOnlineStatuses {
+    repeated UserStatusDetail user_statuses = 1;
+}

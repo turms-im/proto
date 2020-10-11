@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.user";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "model/user/user_session_id.proto";
+
+message UserSessionIds {
+    repeated UserSessionId user_session_ids = 1;
+}

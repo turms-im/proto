@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.message";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+message Message {
+    google.protobuf.Int64Value id = 1;
+    google.protobuf.Int64Value delivery_date = 2;
+    google.protobuf.Int64Value deletion_date = 3;
+    google.protobuf.StringValue text = 4;
+    google.protobuf.Int64Value sender_id = 5;
+    google.protobuf.Int64Value group_id = 6;
+    google.protobuf.BoolValue is_system_message = 7;
+    google.protobuf.Int64Value recipient_id = 8;
+    repeated bytes records = 9;
+}

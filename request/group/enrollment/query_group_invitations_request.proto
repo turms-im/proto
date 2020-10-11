@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.dto.request.group.enrollment";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+message QueryGroupInvitationsRequest {
+    google.protobuf.Int64Value group_id = 1;
+    google.protobuf.BoolValue are_sent_by_me = 2;
+    google.protobuf.Int64Value last_updated_date = 3;
+}

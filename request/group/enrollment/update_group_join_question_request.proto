@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.dto.request.group.enrollment";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+message UpdateGroupJoinQuestionRequest {
+    int64 question_id = 1;
+    google.protobuf.StringValue question = 2;
+    repeated string answers = 3;
+    google.protobuf.Int32Value score = 4;
+}

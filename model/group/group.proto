@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.group";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+message Group {
+    google.protobuf.Int64Value id = 1;
+    google.protobuf.Int64Value type_id = 2;
+    google.protobuf.Int64Value creator_id = 3;
+    google.protobuf.Int64Value owner_id = 4;
+    google.protobuf.StringValue name = 5;
+    google.protobuf.StringValue intro = 6;
+    google.protobuf.StringValue announcement = 7;
+    google.protobuf.Int64Value creation_date = 8;
+    google.protobuf.Int64Value deletion_date = 9;
+    google.protobuf.Int64Value mute_end_date = 10;
+    google.protobuf.BoolValue active = 11;
+}

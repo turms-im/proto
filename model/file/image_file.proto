@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.file";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+message ImageFile {
+    Description description = 1;
+    google.protobuf.BytesValue data = 2;
+
+    message Description {
+        string url = 1;
+        google.protobuf.BoolValue original = 2;
+        google.protobuf.Int32Value image_size = 3;
+        google.protobuf.Int32Value file_size = 4;
+    }
+}

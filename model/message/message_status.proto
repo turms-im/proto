@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.message";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+import "constant/message_delivery_status.proto";
+
+message MessageStatus {
+    google.protobuf.Int64Value message_id = 1;
+    google.protobuf.Int64Value to_user_id = 2;
+    MessageDeliveryStatus delivery_status = 3;
+    google.protobuf.Int64Value reception_date = 4;
+    google.protobuf.Int64Value read_date = 5;
+    google.protobuf.Int64Value recall_date = 6;
+}

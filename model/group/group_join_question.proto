@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.group";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+message GroupJoinQuestion {
+    google.protobuf.Int64Value id = 1;
+    google.protobuf.Int64Value group_id = 2;
+    google.protobuf.StringValue question = 3;
+    repeated string answers = 4;
+    google.protobuf.Int32Value score = 5;
+}

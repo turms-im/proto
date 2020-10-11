@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.file";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+message AudioFile {
+    Description description = 1;
+    google.protobuf.BytesValue data = 2;
+
+    message Description {
+        string url = 1;
+        google.protobuf.Int32Value duration = 2;
+        google.protobuf.Int32Value size = 3;
+        google.protobuf.StringValue format = 4;
+    }
+}

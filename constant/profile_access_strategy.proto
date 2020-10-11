@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.constant";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+enum ProfileAccessStrategy {
+    ALL = 0;
+    ALL_EXCEPT_BLACKLISTED_USERS = 1;
+    FRIENDS = 2;
+}

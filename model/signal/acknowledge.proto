@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.signal";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "google/protobuf/wrappers.proto";
+
+message Acknowledge {
+    int64 delivery_date = 1;
+    google.protobuf.Int64Value message_id = 2;
+}
