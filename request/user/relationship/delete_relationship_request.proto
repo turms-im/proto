@@ -9,7 +9,7 @@ option swift_prefix = "";
 import "google/protobuf/wrappers.proto";
 
 message DeleteRelationshipRequest {
-    int64 related_user_id = 1;
+    int64 user_id = 1;
     google.protobuf.Int32Value group_index = 2;
     google.protobuf.Int32Value target_group_index = 3;
 }

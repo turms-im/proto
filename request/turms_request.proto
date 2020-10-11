@@ -15,9 +15,9 @@ import "request/storage/query_signed_get_url_request.proto";
 import "request/storage/query_signed_put_url_request.proto";
 
 import "request/user/query_user_profile_request.proto";
-import "request/user/query_users_ids_nearby_request.proto";
-import "request/user/query_users_infos_nearby_request.proto";
-import "request/user/query_users_online_status_request.proto";
+import "request/user/query_user_ids_nearby_request.proto";
+import "request/user/query_user_infos_nearby_request.proto";
+import "request/user/query_user_online_statuses_request.proto";
 import "request/user/update_user_location_request.proto";
 import "request/user/update_user_online_status_request.proto";
 import "request/user/update_user_request.proto";
@@ -28,7 +28,7 @@ import "request/user/relationship/create_relationship_request.proto";
 import "request/user/relationship/delete_relationship_group_request.proto";
 import "request/user/relationship/delete_relationship_request.proto";
 import "request/user/relationship/query_friend_requests_request.proto";
-import "request/user/relationship/query_related_users_ids_request.proto";
+import "request/user/relationship/query_related_user_ids_request.proto";
 import "request/user/relationship/query_relationship_groups_request.proto";
 import "request/user/relationship/query_relationships_request.proto";
 import "request/user/relationship/update_friend_request_request.proto";
@@ -38,14 +38,14 @@ import "request/user/relationship/update_relationship_request.proto";
 import "request/group/create_group_request.proto";
 import "request/group/delete_group_request.proto";
 import "request/group/query_group_request.proto";
-import "request/group/query_joined_groups_ids_request.proto";
-import "request/group/query_joined_groups_infos_request.proto";
+import "request/group/query_joined_group_ids_request.proto";
+import "request/group/query_joined_group_infos_request.proto";
 import "request/group/update_group_request.proto";
 
 import "request/group/blacklist/create_group_blacklisted_user_request.proto";
 import "request/group/blacklist/delete_group_blacklisted_user_request.proto";
-import "request/group/blacklist/query_group_blacklisted_users_ids_request.proto";
-import "request/group/blacklist/query_group_blacklisted_users_infos_request.proto";
+import "request/group/blacklist/query_group_blacklisted_user_ids_request.proto";
+import "request/group/blacklist/query_group_blacklisted_user_infos_request.proto";
 
 import "request/group/enrollment/check_group_join_questions_answers_request.proto";
 import "request/group/enrollment/create_group_invitation_request.proto";
@@ -96,9 +96,9 @@ message TurmsRequest {
 
         // User
         QueryUserProfileRequest query_user_profile_request = 100;
-        QueryUsersIdsNearbyRequest query_users_ids_nearby_request = 101;
-        QueryUsersInfosNearbyRequest query_users_infos_nearby_request = 102;
-        QueryUsersOnlineStatusRequest query_users_online_status_request = 103;
+        QueryUserIdsNearbyRequest query_user_ids_nearby_request = 101;
+        QueryUserInfosNearbyRequest query_user_infos_nearby_request = 102;
+        QueryUserOnlineStatusesRequest query_user_online_statuses_request = 103;
         UpdateUserLocationRequest update_user_location_request = 104;
         UpdateUserOnlineStatusRequest update_user_online_status_request = 105;
         UpdateUserRequest update_user_request = 106;
@@ -110,7 +110,7 @@ message TurmsRequest {
         DeleteRelationshipGroupRequest delete_relationship_group_request = 203;
         DeleteRelationshipRequest delete_relationship_request = 204;
         QueryFriendRequestsRequest query_friend_requests_request = 205;
-        QueryRelatedUsersIdsRequest query_related_users_ids_request = 206;
+        QueryRelatedUserIdsRequest query_related_user_ids_request = 206;
         QueryRelationshipGroupsRequest query_relationship_groups_request = 207;
         QueryRelationshipsRequest query_relationships_request = 208;
         UpdateFriendRequestRequest update_friend_request_request = 209;
@@ -121,15 +121,15 @@ message TurmsRequest {
         CreateGroupRequest create_group_request = 300;
         DeleteGroupRequest delete_group_request = 301;
         QueryGroupRequest query_group_request = 302;
-        QueryJoinedGroupsIdsRequest query_joined_groups_ids_request = 303;
-        QueryJoinedGroupsInfosRequest query_joined_groups_infos_request = 304;
+        QueryJoinedGroupIdsRequest query_joined_group_ids_request = 303;
+        QueryJoinedGroupInfosRequest query_joined_group_infos_request = 304;
         UpdateGroupRequest update_group_request = 305;
 
         // Group Blacklist
         CreateGroupBlacklistedUserRequest create_group_blacklisted_user_request = 400;
         DeleteGroupBlacklistedUserRequest delete_group_blacklisted_user_request = 401;
-        QueryGroupBlacklistedUsersIdsRequest query_group_blacklisted_users_ids_request = 402;
-        QueryGroupBlacklistedUsersInfosRequest query_group_blacklisted_users_infos_request = 403;
+        QueryGroupBlacklistedUserIdsRequest query_group_blacklisted_user_ids_request = 402;
+        QueryGroupBlacklistedUserInfosRequest query_group_blacklisted_user_infos_request = 403;
 
         // Group Enrollment
         CheckGroupJoinQuestionsAnswersRequest check_group_join_questions_answers_request = 500;

@@ -8,5 +8,5 @@ option swift_prefix = "";
 
 message CreateGroupBlacklistedUserRequest {
     int64 group_id = 1;
-    int64 blacklisted_user_id = 2;
+    int64 user_id = 2;
 }

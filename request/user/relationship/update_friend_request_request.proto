@@ -10,7 +10,7 @@ import "google/protobuf/wrappers.proto";
 import "constant/response_action.proto";
 
 message UpdateFriendRequestRequest {
-    int64 requestId = 1;
-    ResponseAction responseAction = 2;
+    int64 request_id = 1;
+    ResponseAction response_action = 2;
     google.protobuf.StringValue reason = 3;
 }

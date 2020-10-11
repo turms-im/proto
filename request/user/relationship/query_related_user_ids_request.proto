@@ -8,8 +8,8 @@ option swift_prefix = "";
 
 import "google/protobuf/wrappers.proto";
 
-message QueryRelatedUsersIdsRequest {
-    google.protobuf.BoolValue is_blocked = 1;
+message QueryRelatedUserIdsRequest {
+    google.protobuf.BoolValue blocked = 1;
     google.protobuf.Int32Value group_index = 2;
     google.protobuf.Int64Value last_updated_date = 3;
 }

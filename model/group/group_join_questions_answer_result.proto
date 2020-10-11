@@ -8,6 +8,6 @@ option swift_prefix = "";
 
 message GroupJoinQuestionsAnswerResult {
     int32 score = 1;
-    repeated int64 questions_ids = 2;
+    repeated int64 question_ids = 2;
     bool joined = 3;
 }

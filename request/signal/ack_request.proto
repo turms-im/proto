@@ -7,5 +7,5 @@ option java_multiple_files = true;
 option swift_prefix = "";
 
 message AckRequest {
-    repeated int64 messages_ids = 1;
+    repeated int64 message_ids = 1;
 }

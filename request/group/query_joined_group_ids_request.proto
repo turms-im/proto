@@ -8,6 +8,6 @@ option swift_prefix = "";
 
 import "google/protobuf/wrappers.proto";
 
-message QueryJoinedGroupsIdsRequest {
+message QueryJoinedGroupIdsRequest {
     google.protobuf.Int64Value last_updated_date = 1;
 }

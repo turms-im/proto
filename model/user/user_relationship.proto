@@ -11,7 +11,7 @@ import "google/protobuf/wrappers.proto";
 message UserRelationship {
     google.protobuf.Int64Value owner_id = 1;
     google.protobuf.Int64Value related_user_id = 2;
-    google.protobuf.BoolValue is_blocked = 3;
+    google.protobuf.BoolValue blocked = 3;
     google.protobuf.Int64Value group_index = 4;
     google.protobuf.Int64Value establishment_date = 5;
 }

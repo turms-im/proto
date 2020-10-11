@@ -10,7 +10,7 @@ import "google/protobuf/wrappers.proto";
 
 message DeleteGroupMemberRequest {
     int64 group_id = 1;
-    int64 group_member_id = 2;
+    int64 member_id = 2;
     google.protobuf.Int64Value successor_id = 3;
     google.protobuf.BoolValue quit_after_transfer = 4;
 }

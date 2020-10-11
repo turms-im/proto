@@ -8,9 +8,9 @@ option swift_prefix = "";
 
 import "google/protobuf/wrappers.proto";
 
-message QueryUsersInfosNearbyRequest {
+message QueryUserIdsNearbyRequest {
     float latitude = 1;
     float longitude = 2;
     google.protobuf.FloatValue distance = 3;
-    google.protobuf.UInt32Value maxNumber = 4;
+    google.protobuf.Int32Value max_number = 4;
 }

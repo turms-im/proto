@@ -11,6 +11,6 @@ import "google/protobuf/wrappers.proto";
 message QueryGroupMembersRequest {
     int64 group_id = 1;
     google.protobuf.Int64Value last_updated_date = 2;
-    repeated int64 group_members_ids = 3;
+    repeated int64 member_ids = 3;
     google.protobuf.BoolValue with_status = 4;
 }

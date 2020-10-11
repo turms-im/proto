@@ -6,6 +6,6 @@ option java_package = "im.turms.common.model.dto.request.user";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-message QueryUsersOnlineStatusRequest {
-    repeated int64 users_ids = 1;
+message QueryUserOnlineStatusesRequest {
+    repeated int64 user_ids = 1;
 }

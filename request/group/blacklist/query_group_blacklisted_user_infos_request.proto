@@ -8,7 +8,7 @@ option swift_prefix = "";
 
 import "google/protobuf/wrappers.proto";
 
-message QueryGroupBlacklistedUsersInfosRequest {
+message QueryGroupBlacklistedUserInfosRequest {
     int64 group_id = 1;
     google.protobuf.Int64Value last_updated_date = 2;
 }

@@ -9,8 +9,8 @@ option swift_prefix = "";
 import "google/protobuf/wrappers.proto";
 
 message QueryRelationshipsRequest {
-    repeated int64 related_users_ids = 1;
-    google.protobuf.BoolValue is_blocked = 2;
+    repeated int64 user_ids = 1;
+    google.protobuf.BoolValue blocked = 2;
     google.protobuf.Int32Value group_index = 3;
     google.protobuf.Int64Value last_updated_date = 4;
 }
