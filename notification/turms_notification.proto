@@ -43,6 +43,7 @@ message TurmsNotification {
     // Note: Do not move requester_id to TurmsRequest because it needs to rebuild a whole TurmsNotification
     // when recipients need the requester_id.
     google.protobuf.Int64Value requester_id = 6;
+    google.protobuf.Int32Value close_status = 7;
 
     message Data {
         oneof kind {
