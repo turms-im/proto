@@ -16,6 +16,6 @@ message CreateSessionRequest {
     google.protobuf.StringValue password = 2;
     UserStatus user_status = 3;
     DeviceType device_type = 4;
-    map<string, string> device_details = 5;
+    google.protobuf.StringValue device_details = 5;
     UserLocation location = 6;
 }
