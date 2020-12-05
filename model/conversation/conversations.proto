@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.conversation";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "model/conversation/private_conversation.proto";
+import "model/conversation/group_conversation.proto";
+
+message Conversations {
+    repeated PrivateConversation private_conversations = 1;
+    repeated GroupConversation group_conversations = 2;
+}

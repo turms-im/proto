@@ -10,7 +10,7 @@ import "google/protobuf/wrappers.proto";
 
 message CreateMessageRequest {
     google.protobuf.Int64Value message_id = 1;
-    // Client can never set this to true
+    // is_system_message can only be true if the user is an administrator, or turms server will return an error
     google.protobuf.BoolValue is_system_message = 2;
     google.protobuf.Int64Value group_id = 3;
     google.protobuf.Int64Value recipient_id = 4;

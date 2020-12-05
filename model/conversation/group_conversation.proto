@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.common.model.bo.conversation";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+message GroupConversation {
+    int64 group_id = 1;
+    map<int64, int64> member_id_and_read_date = 2;
+}

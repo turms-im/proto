@@ -8,9 +8,6 @@ option swift_prefix = "";
 
 import "google/protobuf/wrappers.proto";
 
-import "model/signal/acknowledge.proto";
-import "model/signal/session.proto";
-
 import "request/turms_request.proto";
 
 import "model/common/int64_values.proto";
@@ -21,12 +18,13 @@ import "model/group/group_join_questions_with_version.proto";
 import "model/group/group_join_requests_with_version.proto";
 import "model/group/group_members_with_version.proto";
 import "model/group/groups_with_version.proto";
-import "model/message/message_statuses.proto";
+import "model/conversation/conversations.proto";
 import "model/message/messages.proto";
 import "model/message/messages_with_total_list.proto";
 import "model/user/user_friend_requests_with_version.proto";
 import "model/user/user_relationship_groups_with_version.proto";
 import "model/user/user_relationships_with_version.proto";
+import "model/user/user_session.proto";
 import "model/user/user_session_ids.proto";
 import "model/user/users_infos_with_version.proto";
 import "model/user/users_online_statuses.proto";
@@ -51,26 +49,25 @@ message TurmsNotification {
             Int64ValuesWithVersion ids_with_version = 2;
             google.protobuf.StringValue url = 3;
 
-            Acknowledge acknowledge = 4;
-            Session session = 5;
+            Conversations conversations = 4;
 
-            Messages messages = 6;
-            MessageStatuses message_statuses = 7;
-            MessagesWithTotalList messages_with_total_list = 8;
+            Messages messages = 5;
+            MessagesWithTotalList messages_with_total_list = 6;
 
-            UsersInfosWithVersion users_infos_with_version = 9;
-            UsersOnlineStatuses users_online_statuses = 10;
-            UserFriendRequestsWithVersion user_friend_requests_with_version = 11;
-            UserRelationshipGroupsWithVersion user_relationship_groups_with_version = 12;
-            UserRelationshipsWithVersion user_relationships_with_version = 13;
-            UserSessionIds user_session_ids = 14;
+            UserSession user_session = 7;
+            UsersInfosWithVersion users_infos_with_version = 8;
+            UsersOnlineStatuses users_online_statuses = 9;
+            UserFriendRequestsWithVersion user_friend_requests_with_version = 10;
+            UserRelationshipGroupsWithVersion user_relationship_groups_with_version = 11;
+            UserRelationshipsWithVersion user_relationships_with_version = 12;
+            UserSessionIds user_session_ids = 13;
 
-            GroupInvitationsWithVersion group_invitations_with_version = 15;
-            GroupJoinQuestionsAnswerResult group_join_question_answer_result = 16;
-            GroupJoinRequestsWithVersion group_join_requests_with_version = 17;
-            GroupJoinQuestionsWithVersion group_join_questions_with_version = 18;
-            GroupMembersWithVersion group_members_with_version = 19;
-            GroupsWithVersion groups_with_version = 20;
+            GroupInvitationsWithVersion group_invitations_with_version = 14;
+            GroupJoinQuestionsAnswerResult group_join_question_answer_result = 15;
+            GroupJoinRequestsWithVersion group_join_requests_with_version = 16;
+            GroupJoinQuestionsWithVersion group_join_questions_with_version = 17;
+            GroupMembersWithVersion group_members_with_version = 18;
+            GroupsWithVersion groups_with_version = 19;
         }
     }
 }

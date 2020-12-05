@@ -10,9 +10,7 @@ import "google/protobuf/wrappers.proto";
 
 message UpdateMessageRequest {
     int64 message_id = 1;
-    google.protobuf.BoolValue is_system_message = 2;
-    google.protobuf.StringValue text = 3;
-    repeated bytes records = 4;
-    google.protobuf.Int64Value recall_date = 5;
-    google.protobuf.Int64Value read_date = 6;
+    google.protobuf.StringValue text = 2;
+    repeated bytes records = 3;
+    google.protobuf.Int64Value recall_date = 4;
 }
