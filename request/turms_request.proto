@@ -75,7 +75,7 @@ import "request/group/member/update_group_member_request.proto";
 
 // Conversation
 import "request/conversation/query_conversations_request.proto";
-import "request/conversation/update_conversations_request.proto";
+import "request/conversation/update_conversation_request.proto";
 import "request/conversation/update_typing_status_request.proto";
 
 // Message
@@ -97,7 +97,7 @@ message TurmsRequest {
 
         // Conversation
         QueryConversationsRequest query_conversations_request = 5;
-        UpdateConversationsRequest update_conversations_request = 6;
+        UpdateConversationRequest update_conversation_request = 6;
         UpdateTypingStatusRequest update_typing_status_request = 7;
 
         // Message
