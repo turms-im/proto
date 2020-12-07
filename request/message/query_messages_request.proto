@@ -7,7 +7,6 @@ option java_multiple_files = true;
 option swift_prefix = "";
 
 import "google/protobuf/wrappers.proto";
-import "constant/message_delivery_status.proto";
 
 message QueryMessagesRequest {
     repeated int64 ids = 1;
@@ -17,5 +16,4 @@ message QueryMessagesRequest {
     google.protobuf.Int64Value from_id = 5;
     google.protobuf.Int64Value delivery_date_after = 6;
     google.protobuf.Int64Value delivery_date_before = 7;
-    MessageDeliveryStatus delivery_status = 8;
 }
