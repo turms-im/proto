@@ -16,4 +16,5 @@ message QueryMessagesRequest {
     google.protobuf.Int64Value from_id = 5;
     google.protobuf.Int64Value delivery_date_after = 6;
     google.protobuf.Int64Value delivery_date_before = 7;
+    bool with_total = 8;
 }

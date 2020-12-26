@@ -81,7 +81,6 @@ import "request/conversation/update_typing_status_request.proto";
 // Message
 import "request/message/create_message_request.proto";
 import "request/message/query_messages_request.proto";
-import "request/message/query_pending_messages_with_total_request.proto";
 import "request/message/update_message_request.proto";
 
 // Client -> Server -> Client
@@ -103,14 +102,13 @@ message TurmsRequest {
         // Message
         CreateMessageRequest create_message_request = 8;
         QueryMessagesRequest query_messages_request = 9;
-        QueryPendingMessagesWithTotalRequest query_pending_messages_with_total_request = 10;
-        UpdateMessageRequest update_message_request = 11;
+        UpdateMessageRequest update_message_request = 10;
 
         // Group Member
-        CreateGroupMemberRequest create_group_member_request = 12;
-        DeleteGroupMemberRequest delete_group_member_request = 13;
-        QueryGroupMembersRequest query_group_members_request = 14;
-        UpdateGroupMemberRequest update_group_member_request = 15;
+        CreateGroupMemberRequest create_group_member_request = 11;
+        DeleteGroupMemberRequest delete_group_member_request = 12;
+        QueryGroupMembersRequest query_group_members_request = 13;
+        UpdateGroupMemberRequest update_group_member_request = 14;
 
         // User
         QueryUserProfileRequest query_user_profile_request = 100;
