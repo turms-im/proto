@@ -11,7 +11,7 @@ import "google/protobuf/wrappers.proto";
 message Message {
     google.protobuf.Int64Value id = 1;
     google.protobuf.Int64Value delivery_date = 2;
-    google.protobuf.Int64Value deletion_date = 3;
+    google.protobuf.Int64Value modification_date = 3;
     google.protobuf.StringValue text = 4;
     google.protobuf.Int64Value sender_id = 5;
     google.protobuf.Int64Value group_id = 6;
