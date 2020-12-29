@@ -8,6 +8,6 @@ option swift_prefix = "";
 
 enum ProfileAccessStrategy {
     ALL = 0;
-    ALL_EXCEPT_BLACKLISTED_USERS = 1;
+    ALL_EXCEPT_BLOCKED_USERS = 1;
     FRIENDS = 2;
 }

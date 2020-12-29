@@ -48,11 +48,11 @@ import "request/group/query_joined_group_ids_request.proto";
 import "request/group/query_joined_group_infos_request.proto";
 import "request/group/update_group_request.proto";
 
-// Group - Blacklist
-import "request/group/blacklist/create_group_blacklisted_user_request.proto";
-import "request/group/blacklist/delete_group_blacklisted_user_request.proto";
-import "request/group/blacklist/query_group_blacklisted_user_ids_request.proto";
-import "request/group/blacklist/query_group_blacklisted_user_infos_request.proto";
+// Group - Blocklist
+import "request/group/blocklist/create_group_blocked_user_request.proto";
+import "request/group/blocklist/delete_group_blocked_user_request.proto";
+import "request/group/blocklist/query_group_blocked_user_ids_request.proto";
+import "request/group/blocklist/query_group_blocked_user_infos_request.proto";
 
 // Group - Enrollment
 import "request/group/enrollment/check_group_join_questions_answers_request.proto";
@@ -141,11 +141,11 @@ message TurmsRequest {
         QueryJoinedGroupInfosRequest query_joined_group_infos_request = 304;
         UpdateGroupRequest update_group_request = 305;
 
-        // Group Blacklist
-        CreateGroupBlacklistedUserRequest create_group_blacklisted_user_request = 400;
-        DeleteGroupBlacklistedUserRequest delete_group_blacklisted_user_request = 401;
-        QueryGroupBlacklistedUserIdsRequest query_group_blacklisted_user_ids_request = 402;
-        QueryGroupBlacklistedUserInfosRequest query_group_blacklisted_user_infos_request = 403;
+        // Group Blocklist
+        CreateGroupBlockedUserRequest create_group_blocked_user_request = 400;
+        DeleteGroupBlockedUserRequest delete_group_blocked_user_request = 401;
+        QueryGroupBlockedUserIdsRequest query_group_blocked_user_ids_request = 402;
+        QueryGroupBlockedUserInfosRequest query_group_blocked_user_infos_request = 403;
 
         // Group Enrollment
         CheckGroupJoinQuestionsAnswersRequest check_group_join_questions_answers_request = 500;
