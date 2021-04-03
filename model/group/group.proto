@@ -6,17 +6,15 @@ option java_package = "im.turms.common.model.bo.group";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 message Group {
-    google.protobuf.Int64Value id = 1;
-    google.protobuf.Int64Value type_id = 2;
-    google.protobuf.Int64Value creator_id = 3;
-    google.protobuf.Int64Value owner_id = 4;
-    google.protobuf.StringValue name = 5;
-    google.protobuf.StringValue intro = 6;
-    google.protobuf.StringValue announcement = 7;
-    google.protobuf.Int64Value creation_date = 8;
-    google.protobuf.Int64Value mute_end_date = 9;
-    google.protobuf.BoolValue active = 10;
+    optional int64 id = 1;
+    optional int64 type_id = 2;
+    optional int64 creator_id = 3;
+    optional int64 owner_id = 4;
+    optional string name = 5;
+    optional string intro = 6;
+    optional string announcement = 7;
+    optional int64 creation_date = 8;
+    optional int64 mute_end_date = 9;
+    optional bool active = 10;
 }

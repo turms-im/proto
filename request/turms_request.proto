@@ -6,8 +6,6 @@ option java_package = "im.turms.common.model.dto.request";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 // Storage
 import "request/storage/delete_resource_request.proto";
 import "request/storage/query_signed_get_url_request.proto";
@@ -87,7 +85,7 @@ import "request/message/update_message_request.proto";
 message TurmsRequest {
     // Note: request_id is allowed to be duplicate because
     // it is used for clients to identify the response of the same request id in a session
-    google.protobuf.Int64Value request_id = 1;
+    optional int64 request_id = 1;
 
     oneof kind {
         // User - Session

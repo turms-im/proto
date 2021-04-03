@@ -6,8 +6,6 @@ option java_package = "im.turms.common.model.dto.notification";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 import "request/turms_request.proto";
 
 import "model/common/int64_values.proto";
@@ -32,22 +30,22 @@ import "model/user/users_online_statuses.proto";
 message TurmsNotification {
     // Note: request_id is allowed to be duplicate because
     // it is used for clients to identify the response of the same request id in a session
-    google.protobuf.Int64Value request_id = 1;
-    google.protobuf.Int32Value code = 2;
-    google.protobuf.StringValue reason = 3;
+    optional int64 request_id = 1;
+    optional int32 code = 2;
+    optional string reason = 3;
     Data data = 4;
     TurmsRequest relayed_request = 5;
     // requester_id only exists when a requester triggers a notification to its recipients
     // Note: Do not move requester_id to TurmsRequest because it needs to rebuild a whole TurmsNotification
     // when recipients need the requester_id.
-    google.protobuf.Int64Value requester_id = 6;
-    google.protobuf.Int32Value close_status = 7;
+    optional int64 requester_id = 6;
+    optional int32 close_status = 7;
 
     message Data {
         oneof kind {
             Int64Values ids = 1;
             Int64ValuesWithVersion ids_with_version = 2;
-            google.protobuf.StringValue url = 3;
+            string url = 3;
 
             Conversations conversations = 4;
 

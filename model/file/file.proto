@@ -6,15 +6,13 @@ option java_package = "im.turms.common.model.bo.file";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 message File {
-    Description description = 1;
-    google.protobuf.BytesValue data = 2;
+    optional Description description = 1;
+    optional bytes data = 2;
 
     message Description {
         string url = 1;
-        google.protobuf.Int32Value size = 2;
-        google.protobuf.StringValue format = 3;
+        optional int32 size = 2;
+        optional string format = 3;
     }
 }

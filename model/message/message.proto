@@ -6,16 +6,14 @@ option java_package = "im.turms.common.model.bo.message";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 message Message {
-    google.protobuf.Int64Value id = 1;
-    google.protobuf.Int64Value delivery_date = 2;
-    google.protobuf.Int64Value modification_date = 3;
-    google.protobuf.StringValue text = 4;
-    google.protobuf.Int64Value sender_id = 5;
-    google.protobuf.Int64Value group_id = 6;
-    google.protobuf.BoolValue is_system_message = 7;
-    google.protobuf.Int64Value recipient_id = 8;
+    optional int64 id = 1;
+    optional int64 delivery_date = 2;
+    optional int64 modification_date = 3;
+    optional string text = 4;
+    optional int64 sender_id = 5;
+    optional int64 group_id = 6;
+    optional bool is_system_message = 7;
+    optional int64 recipient_id = 8;
     repeated bytes records = 9;
 }

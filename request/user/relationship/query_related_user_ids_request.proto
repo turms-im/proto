@@ -6,10 +6,8 @@ option java_package = "im.turms.common.model.dto.request.user.relationship";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 message QueryRelatedUserIdsRequest {
-    google.protobuf.BoolValue blocked = 1;
-    google.protobuf.Int32Value group_index = 2;
-    google.protobuf.Int64Value last_updated_date = 3;
+    optional bool blocked = 1;
+    optional int32 group_index = 2;
+    optional int64 last_updated_date = 3;
 }

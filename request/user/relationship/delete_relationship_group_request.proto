@@ -6,9 +6,7 @@ option java_package = "im.turms.common.model.dto.request.user.relationship";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 message DeleteRelationshipGroupRequest {
     int32 group_index = 1;
-    google.protobuf.Int32Value target_group_index = 2;
+    optional int32 target_group_index = 2;
 }

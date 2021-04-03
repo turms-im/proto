@@ -6,15 +6,13 @@ option java_package = "im.turms.common.model.dto.request.message";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 message QueryMessagesRequest {
     repeated int64 ids = 1;
-    google.protobuf.Int32Value size = 2;
-    google.protobuf.BoolValue are_group_messages = 3;
-    google.protobuf.BoolValue are_system_messages = 4;
-    google.protobuf.Int64Value from_id = 5;
-    google.protobuf.Int64Value delivery_date_after = 6;
-    google.protobuf.Int64Value delivery_date_before = 7;
+    optional int32 size = 2;
+    optional bool are_group_messages = 3;
+    optional bool are_system_messages = 4;
+    optional int64 from_id = 5;
+    optional int64 delivery_date_after = 6;
+    optional int64 delivery_date_before = 7;
     bool with_total = 8;
 }

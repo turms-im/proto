@@ -6,14 +6,13 @@ option java_package = "im.turms.common.model.bo.user";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
 import "constant/profile_access_strategy.proto";
 
 message UserInfo {
-    google.protobuf.Int64Value id = 1;
-    google.protobuf.StringValue name = 2;
-    google.protobuf.StringValue intro = 3;
-    google.protobuf.Int64Value registration_date = 4;
-    google.protobuf.BoolValue active = 5;
-    ProfileAccessStrategy profile_access_strategy = 6;
+    optional int64 id = 1;
+    optional string name = 2;
+    optional string intro = 3;
+    optional int64 registration_date = 4;
+    optional bool active = 5;
+    optional ProfileAccessStrategy profile_access_strategy = 6;
 }

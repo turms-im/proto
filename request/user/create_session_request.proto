@@ -6,16 +6,15 @@ option java_package = "im.turms.common.model.dto.request.user";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
 import "constant/device_type.proto";
 import "constant/user_status.proto";
 import "model/user/user_location.proto";
 
 message CreateSessionRequest {
     int64 user_id = 1;
-    google.protobuf.StringValue password = 2;
-    UserStatus user_status = 3;
+    optional string password = 2;
+    optional UserStatus user_status = 3;
     DeviceType device_type = 4;
-    google.protobuf.StringValue device_details = 5;
-    UserLocation location = 6;
+    optional string device_details = 5;
+    optional UserLocation location = 6;
 }

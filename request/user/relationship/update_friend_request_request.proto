@@ -6,11 +6,10 @@ option java_package = "im.turms.common.model.dto.request.user.relationship";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
 import "constant/response_action.proto";
 
 message UpdateFriendRequestRequest {
     int64 request_id = 1;
     ResponseAction response_action = 2;
-    google.protobuf.StringValue reason = 3;
+    optional string reason = 3;
 }

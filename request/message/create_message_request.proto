@@ -6,17 +6,15 @@ option java_package = "im.turms.common.model.dto.request.message";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 message CreateMessageRequest {
-    google.protobuf.Int64Value message_id = 1;
+    optional int64 message_id = 1;
     // is_system_message can only be true if the user is an administrator,
     // or turms server will return an error
-    google.protobuf.BoolValue is_system_message = 2;
-    google.protobuf.Int64Value group_id = 3;
-    google.protobuf.Int64Value recipient_id = 4;
-    google.protobuf.Int64Value delivery_date = 5;
-    google.protobuf.StringValue text = 6;
+    optional bool is_system_message = 2;
+    optional int64 group_id = 3;
+    optional int64 recipient_id = 4;
+    optional int64 delivery_date = 5;
+    optional string text = 6;
     repeated bytes records = 7;
-    google.protobuf.Int32Value burn_after = 8;
+    optional int32 burn_after = 8;
 }

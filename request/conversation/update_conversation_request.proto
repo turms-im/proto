@@ -6,10 +6,8 @@ option java_package = "im.turms.common.model.dto.request.conversation";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 message UpdateConversationRequest {
-    google.protobuf.Int64Value target_id = 1;
-    google.protobuf.Int64Value group_id = 2;
+    optional int64 target_id = 1;
+    optional int64 group_id = 2;
     int64 read_date = 3;
 }

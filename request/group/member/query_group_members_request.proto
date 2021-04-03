@@ -6,11 +6,9 @@ option java_package = "im.turms.common.model.dto.request.group.member";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 message QueryGroupMembersRequest {
     int64 group_id = 1;
-    google.protobuf.Int64Value last_updated_date = 2;
+    optional int64 last_updated_date = 2;
     repeated int64 member_ids = 3;
-    google.protobuf.BoolValue with_status = 4;
+    optional bool with_status = 4;
 }

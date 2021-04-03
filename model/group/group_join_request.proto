@@ -6,16 +6,15 @@ option java_package = "im.turms.common.model.bo.group";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
 import "constant/request_status.proto";
 
 message GroupJoinRequest {
-    google.protobuf.Int64Value id = 1;
-    google.protobuf.Int64Value creation_date = 2;
-    google.protobuf.StringValue content = 3;
-    RequestStatus status = 4;
-    google.protobuf.Int64Value expiration_date = 5;
-    google.protobuf.Int64Value group_id = 6;
-    google.protobuf.Int64Value requester_id = 7;
-    google.protobuf.Int64Value responder_id = 8;
+    optional int64 id = 1;
+    optional int64 creation_date = 2;
+    optional string content = 3;
+    optional RequestStatus status = 4;
+    optional int64 expiration_date = 5;
+    optional int64 group_id = 6;
+    optional int64 requester_id = 7;
+    optional int64 responder_id = 8;
 }

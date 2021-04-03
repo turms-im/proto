@@ -6,10 +6,8 @@ option java_package = "im.turms.common.model.dto.request.group.enrollment";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 message QueryGroupJoinQuestionsRequest {
     int64 group_id = 1;
     bool with_answers = 2;
-    google.protobuf.Int64Value last_updated_date = 3;
+    optional int64 last_updated_date = 3;
 }

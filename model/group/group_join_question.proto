@@ -6,12 +6,10 @@ option java_package = "im.turms.common.model.bo.group";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 message GroupJoinQuestion {
-    google.protobuf.Int64Value id = 1;
-    google.protobuf.Int64Value group_id = 2;
-    google.protobuf.StringValue question = 3;
+    optional int64 id = 1;
+    optional int64 group_id = 2;
+    optional string question = 3;
     repeated string answers = 4;
-    google.protobuf.Int32Value score = 5;
+    optional int32 score = 5;
 }

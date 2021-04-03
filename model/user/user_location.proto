@@ -6,12 +6,10 @@ option java_package = "im.turms.common.model.bo.user";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "google/protobuf/wrappers.proto";
-
 message UserLocation {
     float latitude = 1;
     float longitude = 2;
-    google.protobuf.StringValue name = 3;
-    google.protobuf.StringValue address = 4;
-    google.protobuf.Int64Value timestamp = 5;
+    optional string name = 3;
+    optional string address = 4;
+    optional int64 timestamp = 5;
 }
