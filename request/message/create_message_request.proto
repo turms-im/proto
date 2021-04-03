@@ -10,11 +10,12 @@ import "google/protobuf/wrappers.proto";
 
 message CreateMessageRequest {
     google.protobuf.Int64Value message_id = 1;
-    // is_system_message can only be true if the user is an administrator, or turms server will return an error
+    // is_system_message can only be true if the user is an administrator,
+    // or turms server will return an error
     google.protobuf.BoolValue is_system_message = 2;
     google.protobuf.Int64Value group_id = 3;
     google.protobuf.Int64Value recipient_id = 4;
-    int64 delivery_date = 5;
+    google.protobuf.Int64Value delivery_date = 5;
     google.protobuf.StringValue text = 6;
     repeated bytes records = 7;
     google.protobuf.Int32Value burn_after = 8;
