@@ -19,11 +19,11 @@ import "model/group/groups_with_version.proto";
 import "model/conversation/conversations.proto";
 import "model/message/messages.proto";
 import "model/message/messages_with_total_list.proto";
+import "model/user/nearby_users.proto";
 import "model/user/user_friend_requests_with_version.proto";
 import "model/user/user_relationship_groups_with_version.proto";
 import "model/user/user_relationships_with_version.proto";
 import "model/user/user_session.proto";
-import "model/user/user_session_ids.proto";
 import "model/user/users_infos_with_version.proto";
 import "model/user/users_online_statuses.proto";
 
@@ -58,7 +58,7 @@ message TurmsNotification {
             UserFriendRequestsWithVersion user_friend_requests_with_version = 10;
             UserRelationshipGroupsWithVersion user_relationship_groups_with_version = 11;
             UserRelationshipsWithVersion user_relationships_with_version = 12;
-            UserSessionIds user_session_ids = 13;
+            NearbyUsers nearby_users = 13;
 
             GroupInvitationsWithVersion group_invitations_with_version = 14;
             GroupJoinQuestionsAnswerResult group_join_question_answer_result = 15;

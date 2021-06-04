@@ -16,10 +16,9 @@ import "request/user/create_session_request.proto";
 import "request/user/delete_session_request.proto";
 
 // User - Info
-import "request/user/query_user_profile_request.proto";
-import "request/user/query_user_ids_nearby_request.proto";
-import "request/user/query_user_infos_nearby_request.proto";
+import "request/user/query_nearby_users_request.proto";
 import "request/user/query_user_online_statuses_request.proto";
+import "request/user/query_user_profile_request.proto";
 import "request/user/update_user_location_request.proto";
 import "request/user/update_user_online_status_request.proto";
 import "request/user/update_user_request.proto";
@@ -110,12 +109,11 @@ message TurmsRequest {
 
         // User
         QueryUserProfileRequest query_user_profile_request = 100;
-        QueryUserIdsNearbyRequest query_user_ids_nearby_request = 101;
-        QueryUserInfosNearbyRequest query_user_infos_nearby_request = 102;
-        QueryUserOnlineStatusesRequest query_user_online_statuses_request = 103;
-        UpdateUserLocationRequest update_user_location_request = 104;
-        UpdateUserOnlineStatusRequest update_user_online_status_request = 105;
-        UpdateUserRequest update_user_request = 106;
+        QueryNearbyUsersRequest query_nearby_users_request = 101;
+        QueryUserOnlineStatusesRequest query_user_online_statuses_request = 102;
+        UpdateUserLocationRequest update_user_location_request = 103;
+        UpdateUserOnlineStatusRequest update_user_online_status_request = 104;
+        UpdateUserRequest update_user_request = 105;
 
         // User Relationship
         CreateFriendRequestRequest create_friend_request_request = 200;

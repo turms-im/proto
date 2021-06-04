@@ -6,9 +6,8 @@ option java_package = "im.turms.common.model.bo.user";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "constant/device_type.proto";
+import "model/user/nearby_user.proto";
 
-message UserSessionId {
-    int64 user_id = 1;
-    DeviceType device_type = 2;
+message NearbyUsers {
+    repeated NearbyUser nearby_users = 1;
 }
