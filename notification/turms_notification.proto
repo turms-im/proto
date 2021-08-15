@@ -28,18 +28,20 @@ import "model/user/users_infos_with_version.proto";
 import "model/user/users_online_statuses.proto";
 
 message TurmsNotification {
-    // Note: request_id is allowed to be duplicate because
-    // it is used for clients to identify the response of the same request id in a session
+    // Response
+    // request_id is used to tell the client that this notification is for the specific request
     optional int64 request_id = 1;
     optional int32 code = 2;
     optional string reason = 3;
     Data data = 4;
-    TurmsRequest relayed_request = 5;
+
+    // Notification
     // requester_id only exists when a requester triggers a notification to its recipients
-    // Note: Do not move requester_id to TurmsRequest because it needs to rebuild a whole TurmsNotification
-    // when recipients need the requester_id.
-    optional int64 requester_id = 6;
-    optional int32 close_status = 7;
+    // Note: Do not move requester_id to TurmsRequest because it requires rebuilding
+    // a new TurmsNotification when recipients need the requester_id.
+    optional int64 requester_id = 5;
+    optional int32 close_status = 6;
+    TurmsRequest relayed_request = 7;
 
     message Data {
         oneof kind {
