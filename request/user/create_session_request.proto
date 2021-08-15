@@ -11,10 +11,12 @@ import "constant/user_status.proto";
 import "model/user/user_location.proto";
 
 message CreateSessionRequest {
-    int64 user_id = 1;
-    optional string password = 2;
-    optional UserStatus user_status = 3;
-    DeviceType device_type = 4;
-    optional string device_details = 5;
-    optional UserLocation location = 6;
+    int32 version = 1;
+
+    int64 user_id = 2;
+    optional string password = 3;
+    optional UserStatus user_status = 4;
+    DeviceType device_type = 5;
+    optional string device_details = 6;
+    optional UserLocation location = 7;
 }
