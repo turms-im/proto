@@ -16,4 +16,5 @@ message Message {
     optional bool is_system_message = 7;
     optional int64 recipient_id = 8;
     repeated bytes records = 9;
+    optional int32 sequence_id = 10;
 }
