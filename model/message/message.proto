@@ -17,4 +17,5 @@ message Message {
     optional int64 recipient_id = 8;
     repeated bytes records = 9;
     optional int32 sequence_id = 10;
+    optional int64 pre_message_id = 11;
 }

@@ -17,4 +17,5 @@ message CreateMessageRequest {
     optional string text = 6;
     repeated bytes records = 7;
     optional int32 burn_after = 8;
+    optional int64 pre_message_id = 9;
 }
