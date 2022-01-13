@@ -17,6 +17,6 @@ message CreateSessionRequest {
     optional string password = 3;
     optional UserStatus user_status = 4;
     DeviceType device_type = 5;
-    optional string device_details = 6;
+    map<string, string> device_details = 6;
     optional UserLocation location = 7;
 }
