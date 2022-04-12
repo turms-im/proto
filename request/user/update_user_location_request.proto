@@ -9,6 +9,5 @@ option swift_prefix = "";
 message UpdateUserLocationRequest {
     float latitude = 1;
     float longitude = 2;
-    optional string name = 3;
-    optional string address = 4;
+    map<string, string> details = 3;
 }
