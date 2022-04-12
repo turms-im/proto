@@ -8,5 +8,5 @@ option swift_prefix = "";
 
 message GroupConversation {
     int64 group_id = 1;
-    map<int64, int64> member_id_and_read_date = 2;
+    map<int64, int64> member_id_to_read_date = 2;
 }
