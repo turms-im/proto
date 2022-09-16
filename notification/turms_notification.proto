@@ -28,20 +28,24 @@ import "model/user/users_infos_with_version.proto";
 import "model/user/users_online_statuses.proto";
 
 message TurmsNotification {
-    // Response
-    // request_id is used to tell the client that this notification is for the specific request
-    optional int64 request_id = 1;
-    optional int32 code = 2;
-    optional string reason = 3;
-    Data data = 4;
+    // Common => [1, 3]
+    int64 timestamp = 1;
 
-    // Notification
-    // requester_id only exists when a requester triggers a notification to its recipients
-    // Note: Do not move requester_id to TurmsRequest because it requires rebuilding
-    // a new TurmsNotification when recipients need the requester_id.
-    optional int64 requester_id = 5;
-    optional int32 close_status = 6;
-    TurmsRequest relayed_request = 7;
+    // Response => [4, 9]
+    // "request_id" is used to tell the client that
+    // this notification is a response to the specific request
+    optional int64 request_id = 4;
+    optional int32 code = 5;
+    optional string reason = 6;
+    Data data = 7;
+
+    // Notification => [10, 15]
+    // "requester_id" only exists when a requester triggers a notification to its recipients
+    // Note: Do not move "requester_id" to TurmsRequest because it requires rebuilding
+    // a new TurmsNotification when recipients need "requester_id".
+    optional int64 requester_id = 10;
+    optional int32 close_status = 11;
+    TurmsRequest relayed_request = 12;
 
     message Data {
         oneof kind {
