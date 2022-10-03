@@ -8,6 +8,6 @@ option swift_prefix = "";
 
 message QueryRelatedUserIdsRequest {
     optional bool blocked = 1;
-    optional int32 group_index = 2;
+    repeated int32 group_indexes = 2;
     optional int64 last_updated_date = 3;
 }
