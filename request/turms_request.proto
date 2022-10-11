@@ -18,7 +18,7 @@ import "request/user/delete_session_request.proto";
 // User - Info
 import "request/user/query_nearby_users_request.proto";
 import "request/user/query_user_online_statuses_request.proto";
-import "request/user/query_user_profile_request.proto";
+import "request/user/query_user_profiles_request.proto";
 import "request/user/update_user_location_request.proto";
 import "request/user/update_user_online_status_request.proto";
 import "request/user/update_user_request.proto";
@@ -40,7 +40,7 @@ import "request/user/relationship/update_relationship_request.proto";
 // Group
 import "request/group/create_group_request.proto";
 import "request/group/delete_group_request.proto";
-import "request/group/query_group_request.proto";
+import "request/group/query_groups_request.proto";
 import "request/group/query_joined_group_ids_request.proto";
 import "request/group/query_joined_group_infos_request.proto";
 import "request/group/update_group_request.proto";
@@ -55,18 +55,18 @@ import "request/group/blocklist/query_group_blocked_user_infos_request.proto";
 import "request/group/enrollment/check_group_join_questions_answers_request.proto";
 import "request/group/enrollment/create_group_invitation_request.proto";
 import "request/group/enrollment/create_group_join_request_request.proto";
-import "request/group/enrollment/create_group_join_question_request.proto";
+import "request/group/enrollment/create_group_join_questions_request.proto";
 import "request/group/enrollment/delete_group_invitation_request.proto";
 import "request/group/enrollment/delete_group_join_request_request.proto";
-import "request/group/enrollment/delete_group_join_question_request.proto";
+import "request/group/enrollment/delete_group_join_questions_request.proto";
 import "request/group/enrollment/query_group_invitations_request.proto";
 import "request/group/enrollment/query_group_join_requests_request.proto";
 import "request/group/enrollment/query_group_join_questions_request.proto";
 import "request/group/enrollment/update_group_join_question_request.proto";
 
 // Group - Members
-import "request/group/member/create_group_member_request.proto";
-import "request/group/member/delete_group_member_request.proto";
+import "request/group/member/create_group_members_request.proto";
+import "request/group/member/delete_group_members_request.proto";
 import "request/group/member/query_group_members_request.proto";
 import "request/group/member/update_group_member_request.proto";
 
@@ -82,7 +82,7 @@ import "request/message/update_message_request.proto";
 
 // Client -> Server -> Client
 message TurmsRequest {
-    // Note: request_id is allowed to be duplicate because
+    // Note: "request_id" is allowed to be duplicate because
     // it is used for clients to identify the response of the same request id in a session
     optional int64 request_id = 1;
 
@@ -102,13 +102,13 @@ message TurmsRequest {
         UpdateMessageRequest update_message_request = 10;
 
         // Group Member
-        CreateGroupMemberRequest create_group_member_request = 11;
-        DeleteGroupMemberRequest delete_group_member_request = 12;
+        CreateGroupMembersRequest create_group_members_request = 11;
+        DeleteGroupMembersRequest delete_group_members_request = 12;
         QueryGroupMembersRequest query_group_members_request = 13;
         UpdateGroupMemberRequest update_group_member_request = 14;
 
         // User
-        QueryUserProfileRequest query_user_profile_request = 100;
+        QueryUserProfilesRequest query_user_profiles_request = 100;
         QueryNearbyUsersRequest query_nearby_users_request = 101;
         QueryUserOnlineStatusesRequest query_user_online_statuses_request = 102;
         UpdateUserLocationRequest update_user_location_request = 103;
@@ -132,7 +132,7 @@ message TurmsRequest {
         // Group
         CreateGroupRequest create_group_request = 300;
         DeleteGroupRequest delete_group_request = 301;
-        QueryGroupRequest query_group_request = 302;
+        QueryGroupsRequest query_groups_request = 302;
         QueryJoinedGroupIdsRequest query_joined_group_ids_request = 303;
         QueryJoinedGroupInfosRequest query_joined_group_infos_request = 304;
         UpdateGroupRequest update_group_request = 305;
@@ -147,10 +147,10 @@ message TurmsRequest {
         CheckGroupJoinQuestionsAnswersRequest check_group_join_questions_answers_request = 500;
         CreateGroupInvitationRequest create_group_invitation_request = 501;
         CreateGroupJoinRequestRequest create_group_join_request_request = 502;
-        CreateGroupJoinQuestionRequest create_group_join_question_request = 503;
+        CreateGroupJoinQuestionsRequest create_group_join_questions_request = 503;
         DeleteGroupInvitationRequest delete_group_invitation_request = 504;
         DeleteGroupJoinRequestRequest delete_group_join_request_request = 505;
-        DeleteGroupJoinQuestionRequest delete_group_join_question_request = 506;
+        DeleteGroupJoinQuestionsRequest delete_group_join_questions_request = 506;
         QueryGroupInvitationsRequest query_group_invitations_request = 507;
         QueryGroupJoinRequestsRequest query_group_join_requests_request = 508;
         QueryGroupJoinQuestionsRequest query_group_join_questions_request = 509;

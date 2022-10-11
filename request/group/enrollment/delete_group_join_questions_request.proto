@@ -6,9 +6,7 @@ option java_package = "im.turms.server.common.access.client.dto.request.group.en
 option java_multiple_files = true;
 option swift_prefix = "";
 
-message CreateGroupJoinQuestionRequest {
+message DeleteGroupJoinQuestionsRequest {
     int64 group_id = 1;
-    string question = 2;
-    repeated string answers = 3;
-    int32 score = 4;
+    repeated int64 question_ids = 2;
 }

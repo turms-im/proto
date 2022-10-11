@@ -15,6 +15,7 @@ message Group {
     optional string intro = 6;
     optional string announcement = 7;
     optional int64 creation_date = 8;
-    optional int64 mute_end_date = 9;
-    optional bool active = 10;
+    optional int64 last_updated_date = 9;
+    optional int64 mute_end_date = 10;
+    optional bool active = 11;
 }

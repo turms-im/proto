@@ -6,9 +6,9 @@ option java_package = "im.turms.server.common.access.client.dto.request.group.me
 option java_multiple_files = true;
 option swift_prefix = "";
 
-message DeleteGroupMemberRequest {
+message DeleteGroupMembersRequest {
     int64 group_id = 1;
-    int64 member_id = 2;
+    repeated int64 member_ids = 2;
     optional int64 successor_id = 3;
     optional bool quit_after_transfer = 4;
 }

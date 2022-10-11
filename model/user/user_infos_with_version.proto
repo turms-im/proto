@@ -6,8 +6,9 @@ option java_package = "im.turms.server.common.access.client.dto.model.user";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "model/user/user_status_detail.proto";
+import "model/user/user_info.proto";
 
-message UsersOnlineStatuses {
-    repeated UserStatusDetail user_statuses = 1;
+message UserInfosWithVersion {
+    repeated UserInfo user_infos = 1;
+    optional int64 last_updated_date = 2;
 }

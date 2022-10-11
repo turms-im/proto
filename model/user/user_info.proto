@@ -15,5 +15,6 @@ message UserInfo {
     optional string profile_picture = 4;
     optional ProfileAccessStrategy profile_access_strategy = 5;
     optional int64 registration_date = 6;
-    optional bool active = 7;
+    optional int64 last_updated_date = 7;
+    optional bool active = 8;
 }

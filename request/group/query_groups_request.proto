@@ -6,7 +6,7 @@ option java_package = "im.turms.server.common.access.client.dto.request.group";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-message QueryGroupRequest {
-    int64 group_id = 1;
+message QueryGroupsRequest {
+    repeated int64 group_ids = 1;
     optional int64 last_updated_date = 2;
 }
