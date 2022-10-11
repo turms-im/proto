@@ -12,5 +12,6 @@ message UpdateUserRequest {
     optional string password = 1;
     optional string name = 2;
     optional string intro = 3;
-    optional ProfileAccessStrategy profile_access_strategy = 4;
+    optional string profile_picture = 4;
+    optional ProfileAccessStrategy profile_access_strategy = 5;
 }

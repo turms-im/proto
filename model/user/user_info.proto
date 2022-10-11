@@ -12,7 +12,8 @@ message UserInfo {
     optional int64 id = 1;
     optional string name = 2;
     optional string intro = 3;
-    optional int64 registration_date = 4;
-    optional bool active = 5;
-    optional ProfileAccessStrategy profile_access_strategy = 6;
+    optional string profile_picture = 4;
+    optional ProfileAccessStrategy profile_access_strategy = 5;
+    optional int64 registration_date = 6;
+    optional bool active = 7;
 }
