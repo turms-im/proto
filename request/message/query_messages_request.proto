@@ -8,11 +8,11 @@ option swift_prefix = "";
 
 message QueryMessagesRequest {
     repeated int64 ids = 1;
-    optional int32 size = 2;
-    optional bool are_group_messages = 3;
-    optional bool are_system_messages = 4;
-    repeated int64 from_ids = 5;
-    optional int64 delivery_date_after = 6;
-    optional int64 delivery_date_before = 7;
+    optional bool are_group_messages = 2;
+    optional bool are_system_messages = 3;
+    repeated int64 from_ids = 4;
+    optional int64 delivery_date_after = 5;
+    optional int64 delivery_date_before = 6;
+    optional int32 max_count = 7;
     bool with_total = 8;
 }

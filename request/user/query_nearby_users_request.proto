@@ -10,11 +10,11 @@ message QueryNearbyUsersRequest {
     float latitude = 1;
     float longitude = 2;
 
-    optional int32 distance = 3;
-    optional int32 max_number = 4;
+    optional int32 max_count = 3;
+    optional int32 max_distance = 4;
 
     optional bool with_coordinates = 5;
     optional bool with_distance = 6;
 
-    optional bool with_info = 7;
+    optional bool with_user_info = 7;
 }
