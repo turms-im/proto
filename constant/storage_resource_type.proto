@@ -6,9 +6,8 @@ option java_package = "im.turms.server.common.access.client.dto.constant";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-enum ContentType {
-    PROFILE = 0;
-    GROUP_PROFILE = 1;
-    ATTACHMENT = 2;
-//    STORAGE = 2;
+enum StorageResourceType {
+    USER_PROFILE_PICTURE = 0;
+    GROUP_PROFILE_PICTURE = 1;
+    MESSAGE_ATTACHMENT = 2;
 }

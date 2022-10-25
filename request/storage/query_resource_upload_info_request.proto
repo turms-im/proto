@@ -6,11 +6,10 @@ option java_package = "im.turms.server.common.access.client.dto.request.storage"
 option java_multiple_files = true;
 option swift_prefix = "";
 
-import "constant/content_type.proto";
+import "constant/storage_resource_type.proto";
 
-message QuerySignedPutUrlRequest {
-    ContentType content_type = 1;
+message QueryResourceUploadInfoRequest {
+    StorageResourceType type = 1;
     optional string key_str = 2;
     optional int64 key_num = 3;
-    int64 content_length = 4;
 }

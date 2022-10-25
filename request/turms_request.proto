@@ -8,8 +8,8 @@ option swift_prefix = "";
 
 // Storage
 import "request/storage/delete_resource_request.proto";
-import "request/storage/query_signed_get_url_request.proto";
-import "request/storage/query_signed_put_url_request.proto";
+import "request/storage/query_resource_download_info_request.proto";
+import "request/storage/query_resource_upload_info_request.proto";
 
 // User - Session
 import "request/user/create_session_request.proto";
@@ -158,7 +158,7 @@ message TurmsRequest {
 
         // Storage
         DeleteResourceRequest delete_resource_request = 1000;
-        QuerySignedGetUrlRequest query_signed_get_url_request = 1001;
-        QuerySignedPutUrlRequest query_signed_put_url_request = 1002;
+        QueryResourceDownloadInfoRequest query_resource_download_info_request = 1001;
+        QueryResourceUploadInfoRequest query_resource_upload_info_request = 1002;
     }
 }
