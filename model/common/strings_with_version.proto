@@ -6,6 +6,7 @@ option java_package = "im.turms.server.common.access.client.dto.model.common";
 option java_multiple_files = true;
 option swift_prefix = "";
 
-message Int64Values {
-    repeated int64 values = 1;
+message StringsWithVersion {
+    repeated string strings = 1;
+    optional int64 last_updated_date = 2;
 }

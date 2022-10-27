@@ -8,8 +8,8 @@ option swift_prefix = "";
 
 import "request/turms_request.proto";
 
-import "model/common/int64_values.proto";
-import "model/common/int64_values_with_version.proto";
+import "model/common/longs_with_version.proto";
+import "model/common/strings_with_version.proto";
 import "model/group/group_invitations_with_version.proto";
 import "model/group/group_join_questions_answer_result.proto";
 import "model/group/group_join_questions_with_version.proto";
@@ -49,29 +49,35 @@ message TurmsNotification {
 
     message Data {
         oneof kind {
-            Int64Values ids = 1;
-            Int64ValuesWithVersion ids_with_version = 2;
-            string url = 3;
+            // Common
+            int64 long = 1;
+            string string = 2;
+            LongsWithVersion longs_with_version = 3;
+            StringsWithVersion strings_with_version = 4;
 
-            Conversations conversations = 4;
+            // Conversation
+            Conversations conversations = 5;
 
-            Messages messages = 5;
-            MessagesWithTotalList messages_with_total_list = 6;
+            // Message
+            Messages messages = 6;
+            MessagesWithTotalList messages_with_total_list = 7;
 
-            UserSession user_session = 7;
-            UserInfosWithVersion user_infos_with_version = 8;
-            UserOnlineStatuses user_online_statuses = 9;
-            UserFriendRequestsWithVersion user_friend_requests_with_version = 10;
-            UserRelationshipGroupsWithVersion user_relationship_groups_with_version = 11;
-            UserRelationshipsWithVersion user_relationships_with_version = 12;
-            NearbyUsers nearby_users = 13;
+            // User
+            UserSession user_session = 8;
+            UserInfosWithVersion user_infos_with_version = 9;
+            UserOnlineStatuses user_online_statuses = 10;
+            UserFriendRequestsWithVersion user_friend_requests_with_version = 11;
+            UserRelationshipGroupsWithVersion user_relationship_groups_with_version = 12;
+            UserRelationshipsWithVersion user_relationships_with_version = 13;
+            NearbyUsers nearby_users = 14;
 
-            GroupInvitationsWithVersion group_invitations_with_version = 14;
-            GroupJoinQuestionsAnswerResult group_join_question_answer_result = 15;
-            GroupJoinRequestsWithVersion group_join_requests_with_version = 16;
-            GroupJoinQuestionsWithVersion group_join_questions_with_version = 17;
-            GroupMembersWithVersion group_members_with_version = 18;
-            GroupsWithVersion groups_with_version = 19;
+            // Group
+            GroupInvitationsWithVersion group_invitations_with_version = 15;
+            GroupJoinQuestionsAnswerResult group_join_question_answer_result = 16;
+            GroupJoinRequestsWithVersion group_join_requests_with_version = 17;
+            GroupJoinQuestionsWithVersion group_join_questions_with_version = 18;
+            GroupMembersWithVersion group_members_with_version = 19;
+            GroupsWithVersion groups_with_version = 20;
         }
     }
 }
