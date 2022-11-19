@@ -7,6 +7,9 @@ option java_multiple_files = true;
 option swift_prefix = "";
 
 message UpdateRelationshipGroupRequest {
+    // Query filter
     int32 group_index = 1;
+
+    // Update
     string new_name = 2;
 }

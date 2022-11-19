@@ -7,13 +7,18 @@ option java_multiple_files = true;
 option swift_prefix = "";
 
 message UpdateGroupRequest {
+    // Query filter
     int64 group_id = 1;
-    optional string group_name = 2;
-    optional string intro = 3;
-    optional string announcement = 4;
-    optional int32 minimum_score = 5;
-    optional int64 group_type_id = 6;
-    optional int64 mute_end_date = 7;
-    optional int64 successor_id = 8;
-    optional bool quit_after_transfer = 9;
+
+    // Update options
+    optional bool quit_after_transfer = 2;
+
+    // Update
+    optional string name = 3;
+    optional string intro = 4;
+    optional string announcement = 5;
+    optional int32 min_score = 6;
+    optional int64 type_id = 7;
+    optional int64 mute_end_date = 8;
+    optional int64 successor_id = 9;
 }

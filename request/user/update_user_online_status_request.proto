@@ -10,6 +10,9 @@ import "constant/user_status.proto";
 import "constant/device_type.proto";
 
 message UpdateUserOnlineStatusRequest {
-    UserStatus user_status = 1;
-    repeated DeviceType device_types = 2;
+    // Query filter
+    repeated DeviceType device_types = 1;
+
+    // Update
+    UserStatus user_status = 2;
 }

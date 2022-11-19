@@ -9,7 +9,10 @@ option swift_prefix = "";
 import "constant/response_action.proto";
 
 message UpdateFriendRequestRequest {
+    // Query filter
     int64 request_id = 1;
+
+    // Update
     ResponseAction response_action = 2;
     optional string reason = 3;
 }

@@ -10,6 +10,7 @@ import "constant/storage_resource_type.proto";
 
 message DeleteResourceRequest {
     StorageResourceType type = 1;
-    optional string key_str = 2;
-    optional int64 key_num = 3;
+    optional int64 id_num = 2;
+    optional string id_str = 3;
+    map<string, string> extra = 4;
 }

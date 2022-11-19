@@ -10,7 +10,7 @@ message CreateGroupRequest {
     string name = 1;
     optional string intro = 2;
     optional string announcement = 3;
-    optional int32 minimum_score = 4;
-    optional int64 group_type_id = 5;
+    optional int32 min_score = 4;
+    optional int64 type_id = 5;
     optional int64 mute_end_date = 6;
 }

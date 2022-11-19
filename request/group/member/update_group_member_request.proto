@@ -9,8 +9,11 @@ option swift_prefix = "";
 import "constant/group_member_role.proto";
 
 message UpdateGroupMemberRequest {
+    // Query filter
     int64 group_id = 1;
     int64 member_id = 2;
+
+    // Update
     optional string name = 3;
     optional GroupMemberRole role = 4;
     optional int64 mute_end_date = 5;

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.server.common.access.client.dto.request.storage";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+message UpdateMessageAttachmentInfoRequest {
+    // Query filter
+    optional int64 attachment_id_num = 1;
+    optional string attachment_id_str = 2;
+
+    // Update
+    optional int64 user_id_to_share_with = 3;
+    optional int64 user_id_to_unshare_with = 4;
+    optional int64 group_id_to_share_with = 5;
+    optional int64 group_id_to_unshare_with = 6;
+}

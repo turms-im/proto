@@ -19,6 +19,7 @@ import "model/group/groups_with_version.proto";
 import "model/conversation/conversations.proto";
 import "model/message/messages.proto";
 import "model/message/messages_with_total_list.proto";
+import "model/storage/storage_resource_infos.proto";
 import "model/user/nearby_users.proto";
 import "model/user/user_friend_requests_with_version.proto";
 import "model/user/user_infos_with_version.proto";
@@ -78,6 +79,9 @@ message TurmsNotification {
             GroupJoinQuestionsWithVersion group_join_questions_with_version = 18;
             GroupMembersWithVersion group_members_with_version = 19;
             GroupsWithVersion groups_with_version = 20;
+
+            // Storage
+            StorageResourceInfos storage_resource_infos = 50;
         }
     }
 }

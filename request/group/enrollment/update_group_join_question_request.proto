@@ -7,7 +7,10 @@ option java_multiple_files = true;
 option swift_prefix = "";
 
 message UpdateGroupJoinQuestionRequest {
+    // Query filter
     int64 question_id = 1;
+
+    // Update
     optional string question = 2;
     repeated string answers = 3;
     optional int32 score = 4;

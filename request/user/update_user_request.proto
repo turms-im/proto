@@ -9,6 +9,7 @@ option swift_prefix = "";
 import "constant/profile_access_strategy.proto";
 
 message UpdateUserRequest {
+    // Update
     optional string password = 1;
     optional string name = 2;
     optional string intro = 3;

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.server.common.access.client.dto.model.storage";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+message StorageResourceInfo {
+    optional int64 id_num = 1;
+    optional string id_str = 2;
+    optional string name = 3;
+    optional string media_type = 4;
+    int64 uploader_id = 5;
+    int64 creation_date = 6;
+}

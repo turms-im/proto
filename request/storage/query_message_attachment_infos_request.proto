@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.server.common.access.client.dto.request.storage";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+message QueryMessageAttachmentInfosRequest {
+    repeated int64 user_ids = 1;
+    repeated int64 group_ids = 2;
+    optional int64 creation_date_start = 3;
+    optional int64 creation_date_end = 4;
+    optional bool in_private_conversation = 5;
+    optional bool are_shared_by_me = 6;
+}
