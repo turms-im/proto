@@ -12,6 +12,6 @@ message CreateGroupMembersRequest {
     int64 group_id = 1;
     repeated int64 user_ids = 2;
     optional string name = 3;
-    GroupMemberRole role = 4;
+    optional GroupMemberRole role = 4;
     optional int64 mute_end_date = 5;
 }
