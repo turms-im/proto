@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.server.common.access.client.dto.request.user.relationship";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+message DeleteFriendRequestRequest {
+    int64 request_id = 1;
+}

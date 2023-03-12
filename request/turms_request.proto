@@ -29,6 +29,7 @@ import "request/user/update_user_request.proto";
 import "request/user/relationship/create_friend_request_request.proto";
 import "request/user/relationship/create_relationship_group_request.proto";
 import "request/user/relationship/create_relationship_request.proto";
+import "request/user/relationship/delete_friend_request_request.proto";
 import "request/user/relationship/delete_relationship_group_request.proto";
 import "request/user/relationship/delete_relationship_request.proto";
 import "request/user/relationship/query_friend_requests_request.proto";
@@ -123,15 +124,16 @@ message TurmsRequest {
         CreateFriendRequestRequest create_friend_request_request = 200;
         CreateRelationshipGroupRequest create_relationship_group_request = 201;
         CreateRelationshipRequest create_relationship_request = 202;
-        DeleteRelationshipGroupRequest delete_relationship_group_request = 203;
-        DeleteRelationshipRequest delete_relationship_request = 204;
-        QueryFriendRequestsRequest query_friend_requests_request = 205;
-        QueryRelatedUserIdsRequest query_related_user_ids_request = 206;
-        QueryRelationshipGroupsRequest query_relationship_groups_request = 207;
-        QueryRelationshipsRequest query_relationships_request = 208;
-        UpdateFriendRequestRequest update_friend_request_request = 209;
-        UpdateRelationshipGroupRequest update_relationship_group_request = 210;
-        UpdateRelationshipRequest update_relationship_request = 211;
+        DeleteFriendRequestRequest delete_friend_request_request = 203;
+        DeleteRelationshipGroupRequest delete_relationship_group_request = 204;
+        DeleteRelationshipRequest delete_relationship_request = 205;
+        QueryFriendRequestsRequest query_friend_requests_request = 206;
+        QueryRelatedUserIdsRequest query_related_user_ids_request = 207;
+        QueryRelationshipGroupsRequest query_relationship_groups_request = 208;
+        QueryRelationshipsRequest query_relationships_request = 209;
+        UpdateFriendRequestRequest update_friend_request_request = 210;
+        UpdateRelationshipGroupRequest update_relationship_group_request = 211;
+        UpdateRelationshipRequest update_relationship_request = 212;
 
         // Group
         CreateGroupRequest create_group_request = 300;
