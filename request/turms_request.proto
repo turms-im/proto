@@ -64,7 +64,9 @@ import "request/group/enrollment/delete_group_join_questions_request.proto";
 import "request/group/enrollment/query_group_invitations_request.proto";
 import "request/group/enrollment/query_group_join_requests_request.proto";
 import "request/group/enrollment/query_group_join_questions_request.proto";
+import "request/group/enrollment/update_group_invitation_request.proto";
 import "request/group/enrollment/update_group_join_question_request.proto";
+import "request/group/enrollment/update_group_join_request_request.proto";
 
 // Group - Members
 import "request/group/member/create_group_members_request.proto";
@@ -156,7 +158,9 @@ message TurmsRequest {
         QueryGroupInvitationsRequest query_group_invitations_request = 507;
         QueryGroupJoinRequestsRequest query_group_join_requests_request = 508;
         QueryGroupJoinQuestionsRequest query_group_join_questions_request = 509;
-        UpdateGroupJoinQuestionRequest update_group_join_question_request = 510;
+        UpdateGroupInvitationRequest update_group_invitation_request = 510;
+        UpdateGroupJoinQuestionRequest update_group_join_question_request = 511;
+        UpdateGroupJoinRequestRequest update_group_join_request_request = 512;
 
         // Storage
         DeleteResourceRequest delete_resource_request = 1000;
