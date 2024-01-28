@@ -10,4 +10,5 @@ message CreateRelationshipRequest {
     int64 user_id = 1;
     bool blocked = 2;
     optional int32 group_index = 3;
+    optional string name = 4;
 }
