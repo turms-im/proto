@@ -9,4 +9,9 @@ option swift_prefix = "";
 message QueryGroupsRequest {
     repeated int64 group_ids = 1;
     optional int64 last_updated_date = 2;
+    optional string name = 3;
+
+    optional int32 skip = 10;
+    optional int32 limit = 11;
+    repeated int32 fields_to_highlight = 12;
 }
