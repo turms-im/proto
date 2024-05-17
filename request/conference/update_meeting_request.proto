@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.server.common.access.client.dto.request.conference";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+message UpdateMeetingRequest {
+    optional int64 id = 1;
+    optional string name = 2;
+    optional string intro = 3;
+    optional string password = 4;
+}
