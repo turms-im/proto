@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.server.common.access.client.dto.request.user";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "model/common/value.proto";
+
+message UpdateUserSettingsRequest {
+    // Update
+    map<string, Value> settings = 1;
+}

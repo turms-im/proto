@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.server.common.access.client.dto.model.conversation";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "model/conversation/conversation_settings.proto";
+
+message ConversationSettingsList {
+    repeated ConversationSettings conversation_settings_list = 1;
+}

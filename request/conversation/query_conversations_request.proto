@@ -8,7 +8,7 @@ option swift_prefix = "";
 
 message QueryConversationsRequest {
     // Private conversations
-    repeated int64 target_ids = 1;
+    repeated int64 user_ids = 1;
     // Group conversations
     repeated int64 group_ids = 2;
 }

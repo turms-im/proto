@@ -10,6 +10,11 @@ option swift_prefix = "";
 import "request/user/create_session_request.proto";
 import "request/user/delete_session_request.proto";
 
+// User - Settings
+import "request/user/delete_user_settings_request.proto";
+import "request/user/query_user_settings_request.proto";
+import "request/user/update_user_settings_request.proto";
+
 // User - Info
 import "request/user/query_nearby_users_request.proto";
 import "request/user/query_user_online_statuses_request.proto";
@@ -73,6 +78,11 @@ import "request/conversation/query_conversations_request.proto";
 import "request/conversation/update_conversation_request.proto";
 import "request/conversation/update_typing_status_request.proto";
 
+// Conversation - Settings
+import "request/conversation/delete_conversation_settings_request.proto";
+import "request/conversation/query_conversation_settings_request.proto";
+import "request/conversation/update_conversation_settings_request.proto";
+
 // Message
 import "request/message/create_message_request.proto";
 import "request/message/query_messages_request.proto";
@@ -126,6 +136,9 @@ message TurmsRequest {
         UpdateUserLocationRequest update_user_location_request = 103;
         UpdateUserOnlineStatusRequest update_user_online_status_request = 104;
         UpdateUserRequest update_user_request = 105;
+        UpdateUserSettingsRequest update_user_settings_request = 106;
+        DeleteUserSettingsRequest delete_user_settings_request = 107;
+        QueryUserSettingsRequest query_user_settings_request = 108;
 
         // User Relationship
         CreateFriendRequestRequest create_friend_request_request = 200;
@@ -184,5 +197,10 @@ message TurmsRequest {
         QueryResourceUploadInfoRequest query_resource_upload_info_request = 1002;
         QueryMessageAttachmentInfosRequest query_message_attachment_infos_request = 1003;
         UpdateMessageAttachmentInfoRequest update_message_attachment_info_request = 1004;
+
+        // Conversation - Supplement
+        DeleteConversationSettingsRequest delete_conversation_settings_request = 1100;
+        QueryConversationSettingsRequest query_conversation_settings_request = 1101;
+        UpdateConversationSettingsRequest update_conversation_settings_request = 1102;
     }
 }

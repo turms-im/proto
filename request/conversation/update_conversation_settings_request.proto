@@ -6,11 +6,13 @@ option java_package = "im.turms.server.common.access.client.dto.request.conversa
 option java_multiple_files = true;
 option swift_prefix = "";
 
-message UpdateConversationRequest {
+import "model/common/value.proto";
+
+message UpdateConversationSettingsRequest {
     // Query filter
     optional int64 user_id = 1;
     optional int64 group_id = 2;
 
     // Update
-    int64 read_date = 3;
+    map<string, Value> settings = 3;
 }
