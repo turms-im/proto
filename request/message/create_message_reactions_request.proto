@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.server.common.access.client.dto.request.message";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+message CreateMessageReactionsRequest {
+    int64 message_id = 1;
+    repeated int32 reaction_types = 2;
+}

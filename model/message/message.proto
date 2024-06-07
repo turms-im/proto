@@ -6,6 +6,8 @@ option java_package = "im.turms.server.common.access.client.dto.model.message";
 option java_multiple_files = true;
 option swift_prefix = "";
 
+import "model/message/message_reaction_group.proto";
+
 message Message {
     optional int64 id = 1;
     optional int64 delivery_date = 2;
@@ -18,4 +20,5 @@ message Message {
     repeated bytes records = 9;
     optional int32 sequence_id = 10;
     optional int64 pre_message_id = 11;
+    repeated MessageReactionGroup reaction_groups = 12;
 }

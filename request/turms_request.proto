@@ -84,7 +84,9 @@ import "request/conversation/query_conversation_settings_request.proto";
 import "request/conversation/update_conversation_settings_request.proto";
 
 // Message
+import "request/message/create_message_reactions_request.proto";
 import "request/message/create_message_request.proto";
+import "request/message/delete_message_reactions_request.proto";
 import "request/message/query_messages_request.proto";
 import "request/message/update_message_request.proto";
 
@@ -202,5 +204,9 @@ message TurmsRequest {
         DeleteConversationSettingsRequest delete_conversation_settings_request = 1100;
         QueryConversationSettingsRequest query_conversation_settings_request = 1101;
         UpdateConversationSettingsRequest update_conversation_settings_request = 1102;
+
+        // Message - Supplement
+        CreateMessageReactionsRequest create_message_reactions_request = 1200;
+        DeleteMessageReactionsRequest delete_message_reactions_request = 1201;
     }
 }

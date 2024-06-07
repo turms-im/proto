@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package im.turms.proto;
+
+option java_package = "im.turms.server.common.access.client.dto.model.message";
+option java_multiple_files = true;
+option swift_prefix = "";
+
+import "model/user/user_info.proto";
+
+message MessageReactionGroup {
+    int32 reaction_type = 1;
+    int32 reaction_count = 2;
+    repeated UserInfo user_infos = 3;
+}
