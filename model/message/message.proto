@@ -2,11 +2,11 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/message/message_reaction_group.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.model.message";
 option java_multiple_files = true;
 option swift_prefix = "";
-
-import "model/message/message_reaction_group.proto";
 
 message Message {
     optional int64 id = 1;

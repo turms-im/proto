@@ -2,11 +2,11 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/user/user_friend_request.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.model.user";
 option java_multiple_files = true;
 option swift_prefix = "";
-
-import "model/user/user_friend_request.proto";
 
 message UserFriendRequestsWithVersion {
     repeated UserFriendRequest user_friend_requests = 1;

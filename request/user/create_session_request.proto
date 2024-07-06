@@ -2,13 +2,13 @@ syntax = "proto3";
 
 package im.turms.proto;
 
-option java_package = "im.turms.server.common.access.client.dto.request.user";
-option java_multiple_files = true;
-option swift_prefix = "";
-
 import "constant/device_type.proto";
 import "constant/user_status.proto";
 import "model/user/user_location.proto";
+
+option java_package = "im.turms.server.common.access.client.dto.request.user";
+option java_multiple_files = true;
+option swift_prefix = "";
 
 message CreateSessionRequest {
     int32 version = 1;

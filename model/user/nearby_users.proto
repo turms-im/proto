@@ -2,11 +2,11 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/user/nearby_user.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.model.user";
 option java_multiple_files = true;
 option swift_prefix = "";
-
-import "model/user/nearby_user.proto";
 
 message NearbyUsers {
     repeated NearbyUser nearby_users = 1;

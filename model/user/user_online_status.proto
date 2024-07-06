@@ -2,12 +2,12 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "constant/device_type.proto";
+import "constant/user_status.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.model.user";
 option java_multiple_files = true;
 option swift_prefix = "";
-
-import "constant/user_status.proto";
-import "constant/device_type.proto";
 
 message UserOnlineStatus {
     int64 user_id = 1;

@@ -2,11 +2,11 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/group/group_invitation.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.model.group";
 option java_multiple_files = true;
 option swift_prefix = "";
-
-import "model/group/group_invitation.proto";
 
 message GroupInvitationsWithVersion {
     repeated GroupInvitation group_invitations = 1;

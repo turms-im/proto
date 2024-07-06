@@ -2,13 +2,13 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "constant/device_type.proto";
+import "model/user/user_info.proto";
+import "model/user/user_location.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.model.user";
 option java_multiple_files = true;
 option swift_prefix = "";
-
-import "constant/device_type.proto";
-import "model/user/user_location.proto";
-import "model/user/user_info.proto";
 
 message NearbyUser {
     // session info

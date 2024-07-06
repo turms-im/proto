@@ -2,32 +2,20 @@ syntax = "proto3";
 
 package im.turms.proto;
 
-option java_package = "im.turms.server.common.access.client.dto.notification";
-option java_multiple_files = true;
-option swift_prefix = "";
-
-import "request/turms_request.proto";
-
 import "model/common/longs_with_version.proto";
 import "model/common/strings_with_version.proto";
-
 import "model/conference/meetings.proto";
-
 import "model/conversation/conversation_settings_list.proto";
 import "model/conversation/conversations.proto";
-
 import "model/group/group_invitations_with_version.proto";
 import "model/group/group_join_questions_answer_result.proto";
 import "model/group/group_join_questions_with_version.proto";
 import "model/group/group_join_requests_with_version.proto";
 import "model/group/group_members_with_version.proto";
 import "model/group/groups_with_version.proto";
-
 import "model/message/messages.proto";
 import "model/message/messages_with_total_list.proto";
-
 import "model/storage/storage_resource_infos.proto";
-
 import "model/user/nearby_users.proto";
 import "model/user/user_friend_requests_with_version.proto";
 import "model/user/user_infos_with_version.proto";
@@ -36,6 +24,11 @@ import "model/user/user_relationship_groups_with_version.proto";
 import "model/user/user_relationships_with_version.proto";
 import "model/user/user_session.proto";
 import "model/user/user_settings.proto";
+import "request/turms_request.proto";
+
+option java_package = "im.turms.server.common.access.client.dto.notification";
+option java_multiple_files = true;
+option swift_prefix = "";
 
 message TurmsNotification {
     // Common => [1, 3]

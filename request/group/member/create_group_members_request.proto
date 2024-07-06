@@ -2,11 +2,11 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "constant/group_member_role.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.request.group.member";
 option java_multiple_files = true;
 option swift_prefix = "";
-
-import "constant/group_member_role.proto";
 
 message CreateGroupMembersRequest {
     int64 group_id = 1;

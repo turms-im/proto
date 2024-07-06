@@ -2,11 +2,11 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/user/user_relationship_group.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.model.user";
 option java_multiple_files = true;
 option swift_prefix = "";
-
-import "model/user/user_relationship_group.proto";
 
 message UserRelationshipGroupsWithVersion {
     repeated UserRelationshipGroup user_relationship_groups = 1;

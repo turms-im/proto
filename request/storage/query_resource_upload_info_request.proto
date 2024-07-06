@@ -2,11 +2,11 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "constant/storage_resource_type.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.request.storage";
 option java_multiple_files = true;
 option swift_prefix = "";
-
-import "constant/storage_resource_type.proto";
 
 message QueryResourceUploadInfoRequest {
     StorageResourceType type = 1;

@@ -2,28 +2,61 @@ syntax = "proto3";
 
 package im.turms.proto;
 
-option java_package = "im.turms.server.common.access.client.dto.request";
-option java_multiple_files = true;
-option swift_prefix = "";
-
-// User - Session
+import "request/conference/create_meeting_request.proto";
+import "request/conference/delete_meeting_request.proto";
+import "request/conference/query_meetings_request.proto";
+import "request/conference/update_meeting_invitation_request.proto";
+import "request/conference/update_meeting_request.proto";
+import "request/conversation/delete_conversation_settings_request.proto";
+import "request/conversation/query_conversation_settings_request.proto";
+import "request/conversation/query_conversations_request.proto";
+import "request/conversation/update_conversation_request.proto";
+import "request/conversation/update_conversation_settings_request.proto";
+import "request/conversation/update_typing_status_request.proto";
+import "request/group/blocklist/create_group_blocked_user_request.proto";
+import "request/group/blocklist/delete_group_blocked_user_request.proto";
+import "request/group/blocklist/query_group_blocked_user_ids_request.proto";
+import "request/group/blocklist/query_group_blocked_user_infos_request.proto";
+import "request/group/create_group_request.proto";
+import "request/group/delete_group_request.proto";
+import "request/group/enrollment/check_group_join_questions_answers_request.proto";
+import "request/group/enrollment/create_group_invitation_request.proto";
+import "request/group/enrollment/create_group_join_questions_request.proto";
+import "request/group/enrollment/create_group_join_request_request.proto";
+import "request/group/enrollment/delete_group_invitation_request.proto";
+import "request/group/enrollment/delete_group_join_questions_request.proto";
+import "request/group/enrollment/delete_group_join_request_request.proto";
+import "request/group/enrollment/query_group_invitations_request.proto";
+import "request/group/enrollment/query_group_join_questions_request.proto";
+import "request/group/enrollment/query_group_join_requests_request.proto";
+import "request/group/enrollment/update_group_invitation_request.proto";
+import "request/group/enrollment/update_group_join_question_request.proto";
+import "request/group/enrollment/update_group_join_request_request.proto";
+import "request/group/member/create_group_members_request.proto";
+import "request/group/member/delete_group_members_request.proto";
+import "request/group/member/query_group_members_request.proto";
+import "request/group/member/update_group_member_request.proto";
+import "request/group/query_groups_request.proto";
+import "request/group/query_joined_group_ids_request.proto";
+import "request/group/query_joined_group_infos_request.proto";
+import "request/group/update_group_request.proto";
+import "request/message/create_message_reactions_request.proto";
+import "request/message/create_message_request.proto";
+import "request/message/delete_message_reactions_request.proto";
+import "request/message/query_messages_request.proto";
+import "request/message/update_message_request.proto";
+import "request/storage/delete_resource_request.proto";
+import "request/storage/query_message_attachment_infos_request.proto";
+import "request/storage/query_resource_download_info_request.proto";
+import "request/storage/query_resource_upload_info_request.proto";
+import "request/storage/update_message_attachment_info_request.proto";
 import "request/user/create_session_request.proto";
 import "request/user/delete_session_request.proto";
-
-// User - Settings
 import "request/user/delete_user_settings_request.proto";
-import "request/user/query_user_settings_request.proto";
-import "request/user/update_user_settings_request.proto";
-
-// User - Info
 import "request/user/query_nearby_users_request.proto";
 import "request/user/query_user_online_statuses_request.proto";
 import "request/user/query_user_profiles_request.proto";
-import "request/user/update_user_location_request.proto";
-import "request/user/update_user_online_status_request.proto";
-import "request/user/update_user_request.proto";
-
-// User - Relationship
+import "request/user/query_user_settings_request.proto";
 import "request/user/relationship/create_friend_request_request.proto";
 import "request/user/relationship/create_relationship_group_request.proto";
 import "request/user/relationship/create_relationship_request.proto";
@@ -37,72 +70,14 @@ import "request/user/relationship/query_relationships_request.proto";
 import "request/user/relationship/update_friend_request_request.proto";
 import "request/user/relationship/update_relationship_group_request.proto";
 import "request/user/relationship/update_relationship_request.proto";
+import "request/user/update_user_location_request.proto";
+import "request/user/update_user_online_status_request.proto";
+import "request/user/update_user_request.proto";
+import "request/user/update_user_settings_request.proto";
 
-// Group
-import "request/group/create_group_request.proto";
-import "request/group/delete_group_request.proto";
-import "request/group/query_groups_request.proto";
-import "request/group/query_joined_group_ids_request.proto";
-import "request/group/query_joined_group_infos_request.proto";
-import "request/group/update_group_request.proto";
-
-// Group - Blocklist
-import "request/group/blocklist/create_group_blocked_user_request.proto";
-import "request/group/blocklist/delete_group_blocked_user_request.proto";
-import "request/group/blocklist/query_group_blocked_user_ids_request.proto";
-import "request/group/blocklist/query_group_blocked_user_infos_request.proto";
-
-// Group - Enrollment
-import "request/group/enrollment/check_group_join_questions_answers_request.proto";
-import "request/group/enrollment/create_group_invitation_request.proto";
-import "request/group/enrollment/create_group_join_request_request.proto";
-import "request/group/enrollment/create_group_join_questions_request.proto";
-import "request/group/enrollment/delete_group_invitation_request.proto";
-import "request/group/enrollment/delete_group_join_request_request.proto";
-import "request/group/enrollment/delete_group_join_questions_request.proto";
-import "request/group/enrollment/query_group_invitations_request.proto";
-import "request/group/enrollment/query_group_join_requests_request.proto";
-import "request/group/enrollment/query_group_join_questions_request.proto";
-import "request/group/enrollment/update_group_invitation_request.proto";
-import "request/group/enrollment/update_group_join_question_request.proto";
-import "request/group/enrollment/update_group_join_request_request.proto";
-
-// Group - Members
-import "request/group/member/create_group_members_request.proto";
-import "request/group/member/delete_group_members_request.proto";
-import "request/group/member/query_group_members_request.proto";
-import "request/group/member/update_group_member_request.proto";
-
-// Conversation
-import "request/conversation/query_conversations_request.proto";
-import "request/conversation/update_conversation_request.proto";
-import "request/conversation/update_typing_status_request.proto";
-
-// Conversation - Settings
-import "request/conversation/delete_conversation_settings_request.proto";
-import "request/conversation/query_conversation_settings_request.proto";
-import "request/conversation/update_conversation_settings_request.proto";
-
-// Message
-import "request/message/create_message_reactions_request.proto";
-import "request/message/create_message_request.proto";
-import "request/message/delete_message_reactions_request.proto";
-import "request/message/query_messages_request.proto";
-import "request/message/update_message_request.proto";
-
-// Conference
-import "request/conference/create_meeting_request.proto";
-import "request/conference/delete_meeting_request.proto";
-import "request/conference/query_meetings_request.proto";
-import "request/conference/update_meeting_request.proto";
-import "request/conference/update_meeting_invitation_request.proto";
-
-// Storage
-import "request/storage/delete_resource_request.proto";
-import "request/storage/query_resource_download_info_request.proto";
-import "request/storage/query_resource_upload_info_request.proto";
-import "request/storage/query_message_attachment_infos_request.proto";
-import "request/storage/update_message_attachment_info_request.proto";
+option java_package = "im.turms.server.common.access.client.dto.request";
+option java_multiple_files = true;
+option swift_prefix = "";
 
 // Client -> Server -> Client
 message TurmsRequest {
