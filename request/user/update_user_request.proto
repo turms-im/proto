@@ -16,6 +16,7 @@ message UpdateUserRequest {
     optional string intro = 3;
     optional string profile_picture = 4;
     optional ProfileAccessStrategy profile_access_strategy = 5;
+    map<string, Value> user_defined_attributes = 6;
 
     repeated Value custom_attributes = 15;
 }

@@ -20,6 +20,7 @@ message Group {
     optional int64 last_updated_date = 9;
     optional int64 mute_end_date = 10;
     optional bool active = 11;
+    map<string, Value> user_defined_attributes = 12;
 
     repeated Value custom_attributes = 15;
 }

@@ -23,6 +23,7 @@ message UpdateGroupRequest {
     optional int64 type_id = 7;
     optional int64 mute_end_date = 8;
     optional int64 successor_id = 9;
+    map<string, Value> user_defined_attributes = 10;
 
     repeated Value custom_attributes = 15;
 }

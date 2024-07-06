@@ -18,6 +18,7 @@ message UserInfo {
     optional int64 registration_date = 6;
     optional int64 last_updated_date = 7;
     optional bool active = 8;
+    map<string, Value> user_defined_attributes = 9;
 
     repeated Value custom_attributes = 15;
 }

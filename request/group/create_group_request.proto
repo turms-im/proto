@@ -15,6 +15,7 @@ message CreateGroupRequest {
     optional int32 min_score = 4;
     optional int64 type_id = 5;
     optional int64 mute_end_date = 6;
+    map<string, Value> user_defined_attributes = 7;
 
     repeated Value custom_attributes = 15;
 }
