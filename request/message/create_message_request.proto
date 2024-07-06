@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/common/value.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.request.message";
 option java_multiple_files = true;
 option swift_prefix = "";
@@ -18,4 +20,6 @@ message CreateMessageRequest {
     repeated bytes records = 7;
     optional int32 burn_after = 8;
     optional int64 pre_message_id = 9;
+
+    repeated Value custom_attributes = 15;
 }

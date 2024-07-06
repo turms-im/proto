@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/common/value.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.request.storage";
 option java_multiple_files = true;
 option swift_prefix = "";
@@ -13,4 +15,6 @@ message QueryMessageAttachmentInfosRequest {
     optional int64 creation_date_end = 4;
     optional bool in_private_conversation = 5;
     optional bool are_shared_by_me = 6;
+
+    repeated Value custom_attributes = 15;
 }

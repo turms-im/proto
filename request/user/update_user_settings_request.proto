@@ -11,4 +11,6 @@ option swift_prefix = "";
 message UpdateUserSettingsRequest {
     // Update
     map<string, Value> settings = 1;
+
+    repeated Value custom_attributes = 15;
 }

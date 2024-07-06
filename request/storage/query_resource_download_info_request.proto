@@ -3,6 +3,7 @@ syntax = "proto3";
 package im.turms.proto;
 
 import "constant/storage_resource_type.proto";
+import "model/common/value.proto";
 
 option java_package = "im.turms.server.common.access.client.dto.request.storage";
 option java_multiple_files = true;
@@ -12,5 +13,6 @@ message QueryResourceDownloadInfoRequest {
     StorageResourceType type = 1;
     optional int64 id_num = 2;
     optional string id_str = 3;
-    map<string, string> extra = 4;
+
+    repeated Value custom_attributes = 15;
 }

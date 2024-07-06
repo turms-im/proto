@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/common/value.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.request.group.member";
 option java_multiple_files = true;
 option swift_prefix = "";
@@ -11,4 +13,6 @@ message DeleteGroupMembersRequest {
     repeated int64 member_ids = 2;
     optional int64 successor_id = 3;
     optional bool quit_after_transfer = 4;
+
+    repeated Value custom_attributes = 15;
 }

@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/common/value.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.request.conference";
 option java_multiple_files = true;
 option swift_prefix = "";
@@ -16,4 +18,6 @@ message QueryMeetingsRequest {
 
     optional int32 skip = 10;
     optional int32 limit = 11;
+
+    repeated Value custom_attributes = 15;
 }

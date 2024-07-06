@@ -3,6 +3,7 @@ syntax = "proto3";
 package im.turms.proto;
 
 import "constant/response_action.proto";
+import "model/common/value.proto";
 
 option java_package = "im.turms.server.common.access.client.dto.request.conference";
 option java_multiple_files = true;
@@ -15,4 +16,6 @@ message UpdateMeetingInvitationRequest {
 
     // Update
     ResponseAction response_action = 5;
+
+    repeated Value custom_attributes = 15;
 }

@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/common/value.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.request.user";
 option java_multiple_files = true;
 option swift_prefix = "";
@@ -17,4 +19,6 @@ message QueryNearbyUsersRequest {
     optional bool with_distance = 6;
 
     optional bool with_user_info = 7;
+
+    repeated Value custom_attributes = 15;
 }

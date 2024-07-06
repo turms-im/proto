@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/common/value.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.request.user.relationship";
 option java_multiple_files = true;
 option swift_prefix = "";
@@ -15,4 +17,6 @@ message UpdateRelationshipRequest {
     optional int32 new_group_index = 3;
     optional int32 delete_group_index = 4;
     optional string name = 5;
+
+    repeated Value custom_attributes = 15;
 }

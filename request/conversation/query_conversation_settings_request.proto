@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/common/value.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.request.conversation";
 option java_multiple_files = true;
 option swift_prefix = "";
@@ -11,4 +13,6 @@ message QueryConversationSettingsRequest {
     repeated int64 group_ids = 2;
     repeated string names = 3;
     optional int64 last_updated_date_start = 4;
+
+    repeated Value custom_attributes = 15;
 }

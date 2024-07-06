@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/common/value.proto";
+
 option java_package = "im.turms.server.common.access.client.dto.request.storage";
 option java_multiple_files = true;
 option swift_prefix = "";
@@ -16,4 +18,6 @@ message UpdateMessageAttachmentInfoRequest {
     optional int64 user_id_to_unshare_with = 4;
     optional int64 group_id_to_share_with = 5;
     optional int64 group_id_to_unshare_with = 6;
+
+    repeated Value custom_attributes = 15;
 }

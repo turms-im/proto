@@ -15,4 +15,6 @@ message UpdateConversationSettingsRequest {
 
     // Update
     map<string, Value> settings = 3;
+
+    repeated Value custom_attributes = 15;
 }
