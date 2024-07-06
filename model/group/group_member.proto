@@ -5,6 +5,7 @@ package im.turms.proto;
 import "constant/device_type.proto";
 import "constant/group_member_role.proto";
 import "constant/user_status.proto";
+import "model/common/value.proto";
 
 option java_package = "im.turms.server.common.access.client.dto.model.group";
 option java_multiple_files = true;
@@ -19,4 +20,6 @@ message GroupMember {
     optional int64 mute_end_date = 6;
     optional UserStatus user_status = 7;
     repeated DeviceType using_device_types = 8;
+
+    repeated Value custom_attributes = 15;
 }

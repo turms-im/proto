@@ -3,6 +3,7 @@ syntax = "proto3";
 package im.turms.proto;
 
 import "constant/request_status.proto";
+import "model/common/value.proto";
 
 option java_package = "im.turms.server.common.access.client.dto.model.group";
 option java_multiple_files = true;
@@ -17,4 +18,6 @@ message GroupJoinRequest {
     optional int64 group_id = 6;
     optional int64 requester_id = 7;
     optional int64 responder_id = 8;
+
+    repeated Value custom_attributes = 15;
 }

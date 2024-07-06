@@ -13,4 +13,6 @@ message ConversationSettings {
     optional int64 group_id = 2;
     map<string, Value> settings = 3;
     optional int64 last_updated_date = 4;
+
+    repeated Value custom_attributes = 15;
 }

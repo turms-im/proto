@@ -3,6 +3,7 @@ syntax = "proto3";
 package im.turms.proto;
 
 import "constant/profile_access_strategy.proto";
+import "model/common/value.proto";
 
 option java_package = "im.turms.server.common.access.client.dto.model.user";
 option java_multiple_files = true;
@@ -17,4 +18,6 @@ message UserInfo {
     optional int64 registration_date = 6;
     optional int64 last_updated_date = 7;
     optional bool active = 8;
+
+    repeated Value custom_attributes = 15;
 }

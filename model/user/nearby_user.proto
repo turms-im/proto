@@ -3,6 +3,7 @@ syntax = "proto3";
 package im.turms.proto;
 
 import "constant/device_type.proto";
+import "model/common/value.proto";
 import "model/user/user_info.proto";
 import "model/user/user_location.proto";
 
@@ -19,4 +20,6 @@ message NearbyUser {
     // geo info
     optional int32 distance = 4;
     optional UserLocation location = 5;
+
+    repeated Value custom_attributes = 15;
 }

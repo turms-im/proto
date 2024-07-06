@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/common/value.proto";
 import "request/conference/create_meeting_request.proto";
 import "request/conference/delete_meeting_request.proto";
 import "request/conference/query_meetings_request.proto";
@@ -84,6 +85,7 @@ message TurmsRequest {
     // Note: "request_id" is allowed to be duplicate because
     // it is used for clients to identify the response of the same request id in a session
     optional int64 request_id = 1;
+    repeated Value custom_attributes = 2;
 
     oneof kind {
         // User - Session

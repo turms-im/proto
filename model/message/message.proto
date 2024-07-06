@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package im.turms.proto;
 
+import "model/common/value.proto";
 import "model/message/message_reaction_group.proto";
 
 option java_package = "im.turms.server.common.access.client.dto.model.message";
@@ -21,4 +22,6 @@ message Message {
     optional int32 sequence_id = 10;
     optional int64 pre_message_id = 11;
     repeated MessageReactionGroup reaction_groups = 12;
+
+    repeated Value custom_attributes = 15;
 }

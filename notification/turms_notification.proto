@@ -4,6 +4,7 @@ package im.turms.proto;
 
 import "model/common/longs_with_version.proto";
 import "model/common/strings_with_version.proto";
+import "model/common/value.proto";
 import "model/conference/meetings.proto";
 import "model/conversation/conversation_settings_list.proto";
 import "model/conversation/conversations.proto";
@@ -33,6 +34,7 @@ option swift_prefix = "";
 message TurmsNotification {
     // Common => [1, 3]
     int64 timestamp = 1;
+    repeated Value custom_attributes = 2;
 
     // Response => [4, 9]
     // "request_id" is used to tell the client that

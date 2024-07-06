@@ -11,4 +11,6 @@ option swift_prefix = "";
 message UserSettings {
     map<string, Value> settings = 1;
     optional int64 last_updated_date = 2;
+
+    repeated Value custom_attributes = 15;
 }

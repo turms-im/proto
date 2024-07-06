@@ -4,6 +4,7 @@ package im.turms.proto;
 
 import "constant/device_type.proto";
 import "constant/user_status.proto";
+import "model/common/value.proto";
 
 option java_package = "im.turms.server.common.access.client.dto.model.user";
 option java_multiple_files = true;
@@ -12,5 +13,7 @@ option swift_prefix = "";
 message UserOnlineStatus {
     int64 user_id = 1;
     UserStatus user_status = 2;
-    repeated DeviceType using_device_types = 3;
+    repeated DeviceType device_types = 3;
+
+    repeated Value custom_attributes = 15;
 }
