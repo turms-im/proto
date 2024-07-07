@@ -16,4 +16,6 @@ message Value {
         bytes bytes_value = 6;
         string string_value = 7;
     }
+
+    repeated Value list_value = 8;
 }
