@@ -17,6 +17,7 @@ message UpdateRelationshipRequest {
     optional int32 new_group_index = 3;
     optional int32 delete_group_index = 4;
     optional string name = 5;
+    optional string note = 6;
 
     repeated Value custom_attributes = 15;
 }

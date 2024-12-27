@@ -18,6 +18,7 @@ message UpdateGroupMemberRequest {
     optional string name = 3;
     optional GroupMemberRole role = 4;
     optional int64 mute_end_date = 5;
+    optional string note = 6;
 
     repeated Value custom_attributes = 15;
 }

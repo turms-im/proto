@@ -15,6 +15,7 @@ message UserRelationship {
     optional int64 group_index = 4;
     optional int64 establishment_date = 5;
     optional string name = 6;
+    optional string note = 7;
 
     repeated Value custom_attributes = 15;
 }

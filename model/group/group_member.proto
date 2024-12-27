@@ -20,6 +20,7 @@ message GroupMember {
     optional int64 mute_end_date = 6;
     optional UserStatus user_status = 7;
     repeated DeviceType using_device_types = 8;
+    optional string note = 9;
 
     repeated Value custom_attributes = 15;
 }
