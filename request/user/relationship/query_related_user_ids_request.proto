@@ -12,6 +12,7 @@ message QueryRelatedUserIdsRequest {
     optional bool blocked = 1;
     repeated int32 group_indexes = 2;
     optional int64 last_updated_date = 3;
+    repeated int64 user_ids_for_common_relationships = 4;
 
     repeated Value custom_attributes = 15;
 }
